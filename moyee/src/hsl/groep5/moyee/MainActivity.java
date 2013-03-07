@@ -23,6 +23,8 @@ public class MainActivity extends FragmentActivity {
 		fragments.add(new FragmentOption1());
 		fragments.add(new FragmentOption2());
 		fragments.add(new FragmentOption3());
+		mViewPager = (ViewPager)findViewById(R.id.pager);
+		mViewPager.setAdapter(mSectionsPagerAdapter);	
 	}
 
 	@Override
