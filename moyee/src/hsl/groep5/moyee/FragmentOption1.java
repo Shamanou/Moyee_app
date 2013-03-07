@@ -1,5 +1,7 @@
 package hsl.groep5.moyee;
 
-public class FragmentOption1 {
+import android.support.v4.app.Fragment;
+
+public class FragmentOption1 extends Fragment{
 
 }

@@ -3,6 +3,8 @@
 
     <string name="app_name">moyee</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="welcome_message">Ik wil</string>
+    <string name="welcome_option1">Koffie</string>
+    <string name="welcome_option2"/>
 
 </resources>
