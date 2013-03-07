@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="0.14"
-    android:background="#FF0000"
+    android:background="#202543"
     android:focusableInTouchMode="true"
     android:gravity="center_vertical|center_horizontal"
     android:text="@string/welcome_option3"
-    android:textSize="70sp" >
+    android:textColor="#FFFF99"
+    android:textSize="80sp" >
 
 </TextView>

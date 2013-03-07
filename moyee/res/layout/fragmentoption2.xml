@@ -4,9 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="0.14"
-    android:background="#64FE2E"
+    android:background="#202543"
     android:gravity="center_vertical|center_horizontal"
     android:text="@string/welcome_option2"
+    android:textColor="#49B848"
     android:textSize="80sp" >
 
 </TextView>
