@@ -1,7 +1,6 @@
 package hsl.groep5.moyee;
 
 import hsl.groep5.moyee.R;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
