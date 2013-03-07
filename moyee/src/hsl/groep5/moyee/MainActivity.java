@@ -1,6 +1,6 @@
 package hsl.groep5.moyee;
 
-import com.example.moyee.R;
+import hsl.groep5.moyee.R;
 
 import android.os.Bundle;
 import android.app.Activity;
