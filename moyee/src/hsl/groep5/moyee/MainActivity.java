@@ -3,10 +3,15 @@ package hsl.groep5.moyee;
 import hsl.groep5.moyee.R;
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 
-public class MainActivity extends Activity {
-	
+
+public class MainActivity extends FragmentActivity {
+	SectionsPagerAdapter mSectionsPagerAdapter;
+	ViewPager mViewPager;
+	ArrayList<Fragment> fragments = new ArrayList<Fragment>(); 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +25,4 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
 }
