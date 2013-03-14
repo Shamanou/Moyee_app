@@ -22,11 +22,15 @@
         android:textColor="#FFFFFF"
         android:textSize="100sp" />
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="126dp"
-        tools:context=".MainActivity" >
-    </android.support.v4.view.ViewPager>
+       <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="155dp" >
 
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/tabStrip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"/>
+		</android.support.v4.view.ViewPager>
 </LinearLayout>

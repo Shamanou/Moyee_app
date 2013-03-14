@@ -26,9 +26,10 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f080000;
+        public static final int map=0x7f080006;
         public static final int pager=0x7f080002;
+        public static final int tabStrip=0x7f080003;
         public static final int welcome_message=0x7f080001;
-        public static final int welcome_option1=0x7f080003;
         public static final int welcome_option2=0x7f080004;
         public static final int welcome_option3=0x7f080005;
     }
@@ -37,6 +38,7 @@ public final class R {
         public static final int fragmentoption1=0x7f030001;
         public static final int fragmentoption2=0x7f030002;
         public static final int fragmentoption3=0x7f030003;
+        public static final int mapview=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -65,5 +67,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int mapView=0x7f060002;
     }
 }
