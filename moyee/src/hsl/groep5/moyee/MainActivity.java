@@ -3,7 +3,6 @@ package hsl.groep5.moyee;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
