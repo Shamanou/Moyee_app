@@ -8,6 +8,6 @@
     android:gravity="center_vertical|center_horizontal"
     android:text="@string/welcome_option1"
     android:textColor="#FFFFFF"
-    android:textSize="80sp" >
+    android:textSize="40sp" >
 
 </TextView>
