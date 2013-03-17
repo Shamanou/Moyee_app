@@ -9,5 +9,4 @@
     android:text="@string/welcome_option2"
     android:textColor="#49B848"
     android:textSize="40sp" >
-
 </TextView>

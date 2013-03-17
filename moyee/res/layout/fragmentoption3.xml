@@ -10,5 +10,4 @@
     android:text="@string/welcome_option3"
     android:textColor="#FFFF99"
     android:textSize="80sp" >
-
 </TextView>
