@@ -1,8 +1,6 @@
 package hsl.groep5.moyee;
 
 import java.util.ArrayList;
-import java.util.Locale;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -12,44 +10,43 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class MainActivity extends FragmentActivity implements OnClickListener{
-	TabPagerAdapter mTabPagerAdapter;
+	PagerAdapter mTabPagerAdapter;
 	ViewPager mViewPager;
 	ArrayList<Fragment> fragments = new ArrayList<Fragment>();
 	ArrayList<String> titles = new ArrayList<String>();
 	FragmentOption1 fragment1 = new FragmentOption1();
 	FragmentOption2 fragment2 = new FragmentOption2();
 	FragmentOption3 fragment3 = new FragmentOption3();
-	FragmentManager fragmentManager;
+	Button button1;
+	Button button2;
+	Button button3;
+	FragmentManager fragmentManager = getSupportFragmentManager();
 	FragmentTransaction fragmentTransaction;
+	int current_fragment;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Locale l = Locale.getDefault();
 		
-		mTabPagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), fragments,titles);
+		mTabPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments);
+		
 		fragments.add(fragment1);
-		titles.add(getString(R.string.welcome_option1).toUpperCase(l));
 		fragments.add(fragment2);
-		titles.add(getString(R.string.welcome_option2).toUpperCase(l));
 		fragments.add(fragment3);
-		titles.add(getString(R.string.welcome_option3).toUpperCase(l));
+
 		mViewPager = (ViewPager)findViewById(R.id.pager);
 		mViewPager.setAdapter(mTabPagerAdapter); 
-		/*
-	    fragmentManager = getSupportFragmentManager();
-	    fragmentTransaction = fragmentManager.beginTransaction();
-
-		fragmentManager.beginTransaction()
-			.add(R.id.fragment1, fragment1)
-			.add(R.id.fragment2, fragment2)
-			.add(R.id.fragment3, fragment3)
-			.commit(); 
 		
-		*/
+		button1 = (Button) findViewById(R.id.welcome_button1);
+		button1.setOnClickListener(this);
+		button2 = (Button) findViewById(R.id.welcome_button2);
+		button2.setOnClickListener(this);
+		button3 = (Button) findViewById(R.id.welcome_button3);
+		button3.setOnClickListener(this);
 	}
 
 	@Override
@@ -58,17 +55,24 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+	
+	@Override
+	public void onAttachFragment(Fragment fragment) {
+		current_fragment = fragment.getId();
+	}
 
 	@Override
 	public void onClick(View arg0) {
-		/*switch(arg0.getId()){
+		fragmentTransaction = fragmentManager.beginTransaction();
+		switch(arg0.getId()){
+			case R.id.welcome_button1:
+			    fragmentTransaction.replace(current_fragment,fragment1);
 			case R.id.welcome_button2:
-			    fragmentTransaction.remove(fragment1);
-			    fragmentTransaction.replace(R.id.fragment1, fragment2);
-			    fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-			    fragmentTransaction.addToBackStack(null);
-			    fragmentTransaction.commit();   
+			    fragmentTransaction.replace(current_fragment,fragment2);		
+			case R.id.welcome_button3:
+			    fragmentTransaction.replace(current_fragment,fragment3);
 		}
-		*/
+		fragmentTransaction.addToBackStack(null);
+		fragmentTransaction.commit();
 	}
 }
