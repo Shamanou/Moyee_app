@@ -19,7 +19,7 @@ public class FragmentOption1 extends Fragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {	
 		View rootView = inflater.inflate(R.layout.fragmentoption1, null);
-	    mapView = (MapView)getActivity().findViewById(R.id.map);
+	    mapView = (MapView)getActivity().findViewById(R.id.mapview);
 		mc = mapView.getController();
 		//Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/delicious-roman-webfont.ttf");  
 	    //((TextView) rootView).setTypeface(font);
