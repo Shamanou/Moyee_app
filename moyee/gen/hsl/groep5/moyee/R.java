@@ -30,7 +30,7 @@ public final class R {
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f090000;
-        public static final int mapview=0x7f090003;
+        public static final int map=0x7f090003;
         public static final int pager=0x7f090001;
         public static final int tabStrip=0x7f090002;
         public static final int welcome_message=0x7f090006;
@@ -72,6 +72,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
-        public static final int mapView=0x7f070002;
+        public static final int mapViewStyle=0x7f070002;
     }
 }
