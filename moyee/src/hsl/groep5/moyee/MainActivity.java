@@ -36,6 +36,7 @@ public class MainActivity  extends FragmentActivity{
 		
 		mViewPager = (ViewPager)findViewById(R.id.pager);
 		mViewPager.setAdapter(mPagerAdapter); 
+		mViewPager.setCurrentItem(2);
 	}
 
 	@Override
