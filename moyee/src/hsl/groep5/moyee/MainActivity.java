@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 
-public class MainActivity extends FragmentActivity{
+public class MainActivity  extends FragmentActivity{
 	PagerAdapter mPagerAdapter;
 	ViewPager mViewPager;
 	ArrayList<Fragment> fragments = new ArrayList<Fragment>();
@@ -16,6 +16,7 @@ public class MainActivity extends FragmentActivity{
 	FragmentOption1 fragment1 = new FragmentOption1();
 	FragmentOption2 fragment2 = new FragmentOption2();
 	FragmentOption3 fragment3 = new FragmentOption3();
+	FragmentWelcome fragmentWelcome = new FragmentWelcome(); 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +26,14 @@ public class MainActivity extends FragmentActivity{
 		mPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments, titles);
 		
 		titles.add(getResources().getString(R.string.welcome_option1));
+		titles.add(getResources().getString(R.string.welcome_option));
 		titles.add(getResources().getString(R.string.welcome_option2));
 		titles.add(getResources().getString(R.string.welcome_option3));
 		fragments.add(fragment1);
+		fragments.add(fragmentWelcome);
 		fragments.add(fragment2);
 		fragments.add(fragment3);
-
+		
 		mViewPager = (ViewPager)findViewById(R.id.pager);
 		mViewPager.setAdapter(mPagerAdapter); 
 	}
