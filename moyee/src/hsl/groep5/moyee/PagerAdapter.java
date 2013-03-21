@@ -9,10 +9,12 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 public class PagerAdapter extends FragmentStatePagerAdapter{
 	private List <Fragment> fragmentlist;
+	private List <String> titles;
 	
-	public PagerAdapter(FragmentManager fm,ArrayList<Fragment> f) {
+	public PagerAdapter(FragmentManager fm,ArrayList<Fragment> f, ArrayList<String> t) {
 		super(fm);
 		this.fragmentlist = f;
+		this.titles = t;
 	}
 
 	@Override
@@ -23,5 +25,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter{
 	@Override
 	public int getCount() {
 		return fragmentlist.size();
+	}
+	
+	@Override
+	public CharSequence getPageTitle(int position){
+		return titles.get(position);
 	}
 }

@@ -22,8 +22,11 @@ public class MainActivity extends FragmentActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		mPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments);
+		mPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments, titles);
 		
+		titles.add(getResources().getString(R.string.welcome_option1));
+		titles.add(getResources().getString(R.string.welcome_option2));
+		titles.add(getResources().getString(R.string.welcome_option3));
 		fragments.add(fragment1);
 		fragments.add(fragment2);
 		fragments.add(fragment3);
