@@ -3,6 +3,9 @@
     package="hsl.groep5.moyee"
     android:versionCode="1"
     android:versionName="1.0" >
+	<uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
 	<permission
         android:name="hsl.groep5.moyee.permission.MAPS_RECEIVE"
         android:protectionLevel="signature"/>
