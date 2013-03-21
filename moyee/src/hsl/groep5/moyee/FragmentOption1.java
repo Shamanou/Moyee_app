@@ -23,6 +23,6 @@ public class FragmentOption1 extends Fragment{
 		mc = mapView.getController();
 		//Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/delicious-roman-webfont.ttf");  
 	    //((TextView) rootView).setTypeface(font);
-		return rootView;
+		return mapView;
 	}
 }
