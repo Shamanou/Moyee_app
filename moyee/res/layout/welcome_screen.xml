@@ -8,6 +8,10 @@
         android:id="@+id/welcome_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="113dp"
         android:text="@string/welcome_message"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/green" />
