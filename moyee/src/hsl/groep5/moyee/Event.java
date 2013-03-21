@@ -1,4 +1,4 @@
-package hsl.groep5.moyee;
+ package hsl.groep5.moyee;
 
 public class Event {
 
