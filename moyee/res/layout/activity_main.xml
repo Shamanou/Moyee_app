@@ -18,44 +18,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/linearLayout1"
-        android:layout_gravity="bottom"
-        android:layout_weight="0.62" >
+        android:layout_below="@+id/RelativeLayout1"
+        android:layout_gravity="bottom">
+        
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/tabStrip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"/>
         
     </android.support.v4.view.ViewPager>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/pager"
-        android:layout_alignRight="@+id/pager" >
-
-        <Button
-            android:id="@+id/welcome_button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.47"
-            android:linksClickable="true"
-            android:minHeight="24dp"
-            android:text="@string/welcome_option1" />
-
-        <Button
-            android:id="@+id/welcome_button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.47"
-            android:linksClickable="true"
-            android:text="@string/welcome_option2" />
-
-        <Button
-            android:id="@+id/welcome_button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:linksClickable="true"
-            android:minHeight="24dp"
-            android:text="@string/welcome_option3" />
-
-    </LinearLayout>
 
 </RelativeLayout>

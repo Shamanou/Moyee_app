@@ -3,6 +3,12 @@
     package="hsl.groep5.moyee"
     android:versionCode="1"
     android:versionName="1.0" >
+    <dependency>
+     <groupId>com.actionbarsherlock</groupId>
+  	 <artifactId>actionbarsherlock</artifactId>
+  	 <version>4.1.0</version>
+  	 <type>apklib</type>
+    </dependency>
 	<uses-permission android:name="android.permission.INTERNET"/>
     <permission
         android:name="hsl.groep5.moyee.permission.MAPS_RECEIVE"
