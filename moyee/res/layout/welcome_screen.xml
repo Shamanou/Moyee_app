@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
+    android:layout_height="match_parent"
     android:background="#202543" >
 
-    <TextView
-        android:id="@+id/welcome_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="73dp"
-        android:layout_marginTop="113dp"
-        android:text="@string/welcome_message"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/green" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/welcome_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="74dp"
+            android:text="@string/welcome_message"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/green" />
+        
+    </RelativeLayout>
+
+</ScrollView>
