@@ -14,6 +14,7 @@ public class FragmentOption2 extends SupportMapFragment{
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {	
+		super.onCreateView(inflater, container, savedInstanceState);
 		View rootView = inflater.inflate(R.layout.fragmentoption2, null);
 		return rootView;
 	}

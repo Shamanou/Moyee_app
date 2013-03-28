@@ -13,6 +13,7 @@ public class FragmentWelcome extends Fragment{
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {	
+		super.onCreateView(inflater, container, savedInstanceState);
 		View rootView = inflater.inflate(R.layout.welcome_screen, null);		
 	    Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/delicious-roman-webfont.ttf");  
 	    ((TextView) rootView.findViewById(R.id.welcome_message)).setTypeface(font);

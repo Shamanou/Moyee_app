@@ -14,7 +14,7 @@ public class FragmentOption1 extends Fragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState); 
-		View rootView = inflater.inflate(R.layout.fragmentoption2, null);
+		View rootView = inflater.inflate(R.layout.fragmentoption1, null);
 	    //Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/delicious-roman-webfont.ttf");  
 	    //((TextView) rootView).setTypeface(font);
 		return rootView;
