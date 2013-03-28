@@ -15,8 +15,6 @@ public class FragmentOption2 extends SupportMapFragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {	
 		View rootView = inflater.inflate(R.layout.fragmentoption2, null);
-	    Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/delicious-roman-webfont.ttf");  
-	    ((TextView) rootView).setTypeface(font);
 		return rootView;
 	}
 }
