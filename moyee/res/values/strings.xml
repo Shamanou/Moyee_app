@@ -8,5 +8,5 @@
     <string name="welcome_option1">Koffiezoeker</string>
     <string name="welcome_option2">Koffie kopen</string>
     <string name="welcome_option3">Koffiescanner</string>
-
+	<string name="welcome_option2_button">Bestel koffie</string>
 </resources>

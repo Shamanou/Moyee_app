@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/welcome_option2"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="0.14"
-    android:background="#202543"
-    android:gravity="center_vertical|center_horizontal"
-    android:text="@string/welcome_option2"
-    android:textColor="#49B848"
-    android:textSize="40sp" >
-</TextView>
+    android:layout_height="wrap_content" 
+    
+	android:id="@+id/welcome_option2"
+	    android:layout_weight="0.14"
+	    android:background="#202543"
+	    android:textColor="#49B848">
+    
+	<GridView
+	    android:id="@+id/welcome_option2_items"
+	    android:layout_width="fill_parent"
+	    android:layout_height="match_parent"
+	    android:layout_above="@+id/welcome_option2_button"
+	    android:background="#202543"
+	    android:textColor="#49B848" >
+
+	</GridView>
+
+	<Button
+	    android:id="@+id/welcome_option2_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:text="@string/welcome_option2_button" />
+
+</RelativeLayout>
