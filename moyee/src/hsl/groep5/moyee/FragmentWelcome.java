@@ -3,6 +3,7 @@ package hsl.groep5.moyee;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ public class FragmentWelcome extends Fragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {	
 		super.onCreateView(inflater, container, savedInstanceState);
+		Log.d("CHECK", "FragmentWelcome onCreateView()");
 		View rootView = inflater.inflate(R.layout.welcome_screen, null);		
 	    Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/delicious-roman-webfont.ttf");  
 	    ((TextView) rootView.findViewById(R.id.welcome_message)).setTypeface(font);

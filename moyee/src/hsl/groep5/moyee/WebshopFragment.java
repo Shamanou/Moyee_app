@@ -4,17 +4,19 @@ import com.google.android.gms.maps.SupportMapFragment;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class FragmentOption2 extends SupportMapFragment{
+public class WebshopFragment extends SupportMapFragment{
 	public static final String ARG_SECTION_NUMBER = "section_number";	
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {	
 		super.onCreateView(inflater, container, savedInstanceState);
+		Log.d("CHECK", "FragmentOption2 onCreateView()");
 		View rootView = inflater.inflate(R.layout.fragmentoption2, null);
 		return rootView;
 	}

@@ -9,6 +9,6 @@ package hsl.groep5.moyee;
 
 public final class Manifest {
     public static final class permission {
-        public static final String MAPS_RECEIVE="hsl.groep5.moyee.permission.MAPS_RECEIVE";
+        public static final String MAPS_RECEIVE="android.permission.MAPS_RECEIVE";
     }
 }
