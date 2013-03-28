@@ -9,7 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
 
-public class MainActivity  extends FragmentActivity{
+public class MainActivity  extends FragmentActivity {
 	PagerAdapter mPagerAdapter;
 	ViewPager mViewPager;
 	ArrayList<Fragment> fragments = new ArrayList<Fragment>();
