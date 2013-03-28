@@ -29,7 +29,7 @@ public class WebshopFragment extends SupportMapFragment {
 		super.onCreateView(inflater, container, savedInstanceState);
 		Log.d("CHECK", "FragmentOption2 onCreateView()");
 		View rootView = inflater.inflate(R.layout.fragmentoption2, null);
-		MoyeeHttpAPI.getShopItems("http://mike.k0k.nl/test.php?id=123");
+		new HttpAPI(this).execute("http://mike.k0k.nl/test.php?id=123");
 		return rootView;
 	}
 	
