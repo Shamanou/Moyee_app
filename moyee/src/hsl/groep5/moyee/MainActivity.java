@@ -16,8 +16,8 @@ public class MainActivity  extends FragmentActivity{
 	ArrayList<String> titles = new ArrayList<String>();
 	MapsFragment gmaps = new MapsFragment();
 	WebshopFragment webshop = new WebshopFragment();
-	FragmentOption3 fragment3 = new FragmentOption3();
-	FragmentWelcome fragmentWelcome = new FragmentWelcome();
+	ScannerFragment fragment3 = new ScannerFragment();
+	WelcomeFragment fragmentWelcome = new WelcomeFragment();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
