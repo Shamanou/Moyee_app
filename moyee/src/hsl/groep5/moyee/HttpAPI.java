@@ -13,9 +13,10 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 public class HttpAPI extends AsyncTask<String, Integer, String> {
+	HttpAPIResult resultObject;
 	
-	public HttpAPI (Object object) {
-		
+	public HttpAPI (HttpAPIResult resultObject) {
+		this.resultObject = resultObject;
 	}
 	
 	@Override
@@ -49,7 +50,7 @@ public class HttpAPI extends AsyncTask<String, Integer, String> {
 	protected void onPostExecute(String result) {
 		super.onPostExecute(result);
 		// writing response to log
-		Log.d("HTTP", result);
+		this.resultObject.onHttpResult(result);
 	}
     
 }

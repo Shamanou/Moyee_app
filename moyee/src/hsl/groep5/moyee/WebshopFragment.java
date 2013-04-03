@@ -21,7 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class WebshopFragment extends SupportMapFragment {
+public class WebshopFragment extends SupportMapFragment implements HttpAPIResult {
 	public static final String ARG_SECTION_NUMBER = "section_number";	
 
 	@Override
@@ -32,9 +32,10 @@ public class WebshopFragment extends SupportMapFragment {
 		new HttpAPI(this).execute("http://mike.k0k.nl/test.php?id=123");
 		return rootView;
 	}
-	
-	public static void onResultShopItems(String result) {
-		
+
+	@Override
+	public void onHttpResult(String result) {
+		// TODO Auto-generated method stub
 		Log.d("HTTP", result);
 	}
 }
