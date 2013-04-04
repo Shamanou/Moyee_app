@@ -1,8 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">moyee</string>
     <string name="action_settings">Settings</string>
-    <string name="welcome_message">Ik wil</string>
-    <string name="welcome_option1">Koffie</string>
-    <string name="welcome_option2">Events</string>
-    <string name="welcome_option3">Scanner</string>
+    <string name="welcome_message">INFORMATIE</string>
+    <string name="welcome_option">Boodschap</string>
+    <string name="welcome_option1">Koffiezoeker</string>
+    <string name="welcome_option2">Koffie kopen</string>
+    <string name="welcome_option3">Koffiescanner</string>
+	<string name="welcome_option2_button">Bestel koffie</string>
 </resources>
