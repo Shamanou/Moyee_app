@@ -1,5 +1,6 @@
 package hsl.groep5.moyee;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -22,7 +23,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsFragment extends Fragment implements HttpAPIResult{
 	public static final String ARG_SECTION_NUMBER = "section_number";
 	static final LatLng HOGESCHOOL = new LatLng(52.167009,4.467101 );
-	static final LatLng STATION = new LatLng(52.165956,4.481478);
 	private GoogleMap map;
 	JSONObject jsonObject;
 
@@ -36,18 +36,10 @@ public class MapsFragment extends Fragment implements HttpAPIResult{
 		 map = ((SupportMapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		 map.moveCamera(CameraUpdateFactory.newLatLngZoom(HOGESCHOOL, 15));
 		 map.animateCamera(CameraUpdateFactory.zoomTo(14), 2000, null); 
-		 new HttpAPI(this).execute("http://mike.k0k.nl/moyeeapi.php?get=locations");
 		 
-		 if (map!= null){
-		      Marker station = map.addMarker(new MarkerOptions().position(STATION)
-		          .title("Moyee Station Leiden")
-		      	  .snippet("Hier verkopen we Moyee Koffie")
-		      	  .icon(BitmapDescriptorFactory
-		                  .fromResource(R.drawable.fairchain_coffee)
-		                  )
-		          );
-		      
-		 }
+	
+		new HttpAPI(this).execute("http://mike.k0k.nl/moyeeapi.php?get=locations");
+		 
 		
 		return rootView;
 	}
@@ -55,5 +47,45 @@ public class MapsFragment extends Fragment implements HttpAPIResult{
 
 	@Override
 	public void onHttpResult(String result, int id) {
-	}
+		JSONObject jsonObject = null;
+		try {
+			jsonObject = new JSONObject(result);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//haal de array 'data' uit het object
+		JSONArray data = null;
+		try {
+			data = jsonObject.getJSONArray("data");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		//loop door de array heen
+		  for (int i = 0; i < data.length(); i++) {
+		         //pak een item uit de array
+		        JSONObject item = null;
+				try {
+					item = data.getJSONObject(i);
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		        try {
+		        	LatLng markerLoc = new LatLng( item.getDouble("lat") , item.getDouble("long") );
+		        	Marker marker = map.addMarker(new MarkerOptions().position(markerLoc)
+		        			.title(item.getString("title"))
+		        			.snippet(item.getString("description"))
+		  		      	  	.icon(BitmapDescriptorFactory
+				                  .fromResource(R.drawable.marker)
+				                  )
+				          );
+					
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	}}
 }
