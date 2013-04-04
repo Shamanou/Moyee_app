@@ -4,6 +4,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Context;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -20,11 +25,14 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-public class MapsFragment extends Fragment implements HttpAPIResult{
+public class MapsFragment extends Fragment implements HttpAPIResult,  LocationListener{
 	public static final String ARG_SECTION_NUMBER = "section_number";
 	static final LatLng HOGESCHOOL = new LatLng(52.167009,4.467101 );
 	private GoogleMap map;
 	JSONObject jsonObject;
+	private LocationManager locationManager;
+	private String provider;
+
 
 	
 	@Override
@@ -36,7 +44,17 @@ public class MapsFragment extends Fragment implements HttpAPIResult{
 		 map = ((SupportMapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		 map.moveCamera(CameraUpdateFactory.newLatLngZoom(HOGESCHOOL, 15));
 		 map.animateCamera(CameraUpdateFactory.zoomTo(14), 2000, null); 
-		 
+		 locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+		 Criteria criteria = new Criteria();
+		 provider = locationManager.getBestProvider(criteria, true);
+		 map.setMyLocationEnabled(true);
+		 Location location = locationManager.getLastKnownLocation(provider);
+
+		 if (location != null) {
+		      System.out.println("Provider " + provider + " has been selected.");
+		      onLocationChanged(location);
+		 }
+
 	
 		new HttpAPI(this).execute("http://mike.k0k.nl/moyeeapi.php?get=locations");
 		 
@@ -51,7 +69,7 @@ public class MapsFragment extends Fragment implements HttpAPIResult{
 		try {
 			jsonObject = new JSONObject(result);
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		//haal de array 'data' uit het object
@@ -59,7 +77,7 @@ public class MapsFragment extends Fragment implements HttpAPIResult{
 		try {
 			data = jsonObject.getJSONArray("data");
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 
@@ -70,11 +88,13 @@ public class MapsFragment extends Fragment implements HttpAPIResult{
 				try {
 					item = data.getJSONObject(i);
 				} catch (JSONException e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				}
 		        try {
+		        	//marker locatie maken van lat/long uit database
 		        	LatLng markerLoc = new LatLng( item.getDouble("lat") , item.getDouble("long") );
+		        	//Marker toevoegen op deze locatie met title, description en het standaard icoon
 		        	Marker marker = map.addMarker(new MarkerOptions().position(markerLoc)
 		        			.title(item.getString("title"))
 		        			.snippet(item.getString("description"))
@@ -84,8 +104,40 @@ public class MapsFragment extends Fragment implements HttpAPIResult{
 				          );
 					
 				} catch (JSONException e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				}
 	}}
+
+
+	@Override
+	public void onLocationChanged(Location location) {
+		 double lat = (double) (location.getLatitude());
+		 double lng = (double) (location.getLongitude());
+		 LatLng personLoc = new LatLng(lat,lng);
+		 map.moveCamera(CameraUpdateFactory.newLatLngZoom(personLoc, 15));
+
+		
+	}
+
+
+	@Override
+	public void onProviderDisabled(String arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void onProviderEnabled(String arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
+		// TODO Auto-generated method stub
+		
+	}
 }
