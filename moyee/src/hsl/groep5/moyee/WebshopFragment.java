@@ -23,6 +23,5 @@ public class WebshopFragment extends SupportMapFragment implements HttpAPIResult
 	@Override
 	public void onHttpResult(String result) {
 		// TODO Auto-generated method stub
-		Log.d("HTTP", result);
 	}
 }

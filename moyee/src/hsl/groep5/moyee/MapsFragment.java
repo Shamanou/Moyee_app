@@ -15,6 +15,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+
 public class MapsFragment extends Fragment{
 	public static final String ARG_SECTION_NUMBER = "section_number";
 	static final LatLng HOGESCHOOL = new LatLng(52.167009,4.467101 );
@@ -30,14 +31,16 @@ public class MapsFragment extends Fragment{
 		
 		 map = ((SupportMapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		 map.moveCamera(CameraUpdateFactory.newLatLngZoom(HOGESCHOOL, 15));
-		 map.animateCamera(CameraUpdateFactory.zoomTo(18), 2000, null); 
+		 map.animateCamera(CameraUpdateFactory.zoomTo(14), 2000, null); 
 		 
 		 if (map!= null){
 		      Marker station = map.addMarker(new MarkerOptions().position(STATION)
 		          .title("Moyee Station Leiden")
 		      	  .snippet("Hier verkopen we Moyee Koffie")
 		      	  .icon(BitmapDescriptorFactory
-		                  .fromResource(R.drawable.fairchain_coffee)));
+		                  .fromResource(R.drawable.fairchain_coffee)
+		                  )
+		          );
 		      
 		 }
 		
