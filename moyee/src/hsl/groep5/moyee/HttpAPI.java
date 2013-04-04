@@ -14,9 +14,15 @@ import android.util.Log;
 
 public class HttpAPI extends AsyncTask<String, Integer, String> {
 	HttpAPIResult resultObject;
+	int id = 0;
 	
 	public HttpAPI (HttpAPIResult resultObject) {
 		this.resultObject = resultObject;
+	}
+	
+	public HttpAPI (HttpAPIResult resultObject, int id) {
+		this.resultObject = resultObject;
+		this.id = id;
 	}
 	
 	@Override
@@ -50,7 +56,7 @@ public class HttpAPI extends AsyncTask<String, Integer, String> {
 	protected void onPostExecute(String result) {
 		super.onPostExecute(result);
 		// writing response to log
-		this.resultObject.onHttpResult(result);
+		this.resultObject.onHttpResult(result, this.id);
 	}
     
 }
