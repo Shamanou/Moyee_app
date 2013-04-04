@@ -1,5 +1,8 @@
 package hsl.groep5.moyee;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -16,11 +19,12 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-public class MapsFragment extends Fragment{
+public class MapsFragment extends Fragment implements HttpAPIResult{
 	public static final String ARG_SECTION_NUMBER = "section_number";
 	static final LatLng HOGESCHOOL = new LatLng(52.167009,4.467101 );
 	static final LatLng STATION = new LatLng(52.165956,4.481478);
 	private GoogleMap map;
+	JSONObject jsonObject;
 
 	
 	@Override
@@ -32,6 +36,7 @@ public class MapsFragment extends Fragment{
 		 map = ((SupportMapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		 map.moveCamera(CameraUpdateFactory.newLatLngZoom(HOGESCHOOL, 15));
 		 map.animateCamera(CameraUpdateFactory.zoomTo(14), 2000, null); 
+		 new HttpAPI(this).execute("http://mike.k0k.nl/moyeeapi.php?get=locations");
 		 
 		 if (map!= null){
 		      Marker station = map.addMarker(new MarkerOptions().position(STATION)
@@ -45,5 +50,10 @@ public class MapsFragment extends Fragment{
 		 }
 		
 		return rootView;
+	}
+
+
+	@Override
+	public void onHttpResult(String result, int id) {
 	}
 }
