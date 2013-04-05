@@ -93,7 +93,7 @@ public class MapsFragment extends Fragment implements HttpAPIResult,  LocationLi
 				}
 		        try {
 		        	//marker locatie maken van lat/long uit database
-		        	LatLng markerLoc = new LatLng( item.getDouble("lat") , item.getDouble("long") );
+		        	LatLng markerLoc = new LatLng( item.getDouble("lat") , item.getDouble("lng") );
 		        	//Marker toevoegen op deze locatie met title, description en het standaard icoon
 		        	Marker marker = map.addMarker(new MarkerOptions().position(markerLoc)
 		        			.title(item.getString("title"))
