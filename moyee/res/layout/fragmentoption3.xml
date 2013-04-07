@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/welcome_option3"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="0.14"
-    android:background="#202543"
-    android:focusableInTouchMode="true"
-    android:gravity="center_vertical|center_horizontal"
-    android:text="@string/welcome_option3"
-    android:textColor="#FFFF99"
-    android:textSize="80sp" >
-</TextView>
+    android:layout_height="wrap_content" 
+    
+	android:id="@+id/welcome_option2"
+	    android:layout_weight="0.14"
+	    android:background="#202543"
+	    android:textColor="#49B848">
+
+	  <Button
+	      android:id="@+id/scan2"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_above="@+id/scan"
+	      android:layout_alignRight="@+id/scan"
+	      android:layout_marginBottom="34dp"
+	      android:text="Scan Code2" />
+
+	  <Button
+	      android:id="@+id/scan"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_alignParentBottom="true"
+	      android:layout_centerHorizontal="true"
+	      android:text="Scan Code" />
+
+</RelativeLayout>

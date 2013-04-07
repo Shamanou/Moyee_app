@@ -6,5 +6,6 @@
 	<classpathentry exported="true" kind="lib" path="libs/google-play-services.jar"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="lib" path="/CaptureActivity/libs/core.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

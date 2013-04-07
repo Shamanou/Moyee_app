@@ -7,14 +7,33 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentOption3 extends Fragment{
-	public static final String ARG_SECTION_NUMBER = "section_number";	
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.Menu;
+import android.widget.TextView;
+ 
+public class FragmentOption3 extends Activity {
+ 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+ 
+        Intent intent = new Intent("com.google.zxing.client.android.SCAN");
+        startActivityForResult(intent, 0);
+    }
+ 
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        if (requestCode == 0) {
+            if (resultCode == RESULT_OK) {
+              String contents = intent.getStringExtra("SCAN_RESULT");
+              String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
+              // Handle successful scan
+           } else if (resultCode == RESULT_CANCELED) {
+                 //Handle cancel
+           }
+        }
+     }
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {	
-		super.onCreateView(inflater, container, savedInstanceState);
-		Log.d("CHECK", "FragmentOption3 onCreateView()");
-		View rootView = inflater.inflate(R.layout.fragmentoption3, null);		
-		return rootView;
-	}
 }
