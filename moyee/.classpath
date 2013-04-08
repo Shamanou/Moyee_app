@@ -3,8 +3,8 @@
 	<classpathentry excluding="hsl/groep5/moyee/Adapter.java" kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry exported="true" kind="lib" path="libs/maps.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/google-play-services.jar"/>
+	<classpathentry kind="lib" path="libs/google-play-services.jar"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

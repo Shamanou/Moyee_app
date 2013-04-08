@@ -4,12 +4,13 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.Menu;
 
-public class MainActivity  extends FragmentActivity {
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.MenuInflater;
+
+public class MainActivity  extends SherlockFragmentActivity {
 	PagerAdapter mPagerAdapter;
 	ViewPager mViewPager;
 	ArrayList<Fragment> fragments = new ArrayList<Fragment>();
@@ -39,11 +40,5 @@ public class MainActivity  extends FragmentActivity {
 		mViewPager = (ViewPager)findViewById(R.id.pager);
 		mViewPager.setAdapter(mPagerAdapter); 
 		mViewPager.setCurrentItem(2);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
 	}
 }

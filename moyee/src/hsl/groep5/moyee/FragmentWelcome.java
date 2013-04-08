@@ -2,14 +2,15 @@ package hsl.groep5.moyee;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class FragmentWelcome extends Fragment{
+import com.actionbarsherlock.app.SherlockFragment;
+
+public class FragmentWelcome extends SherlockFragment{
 	public static final String ARG_SECTION_NUMBER = "section_number";	
 
 	@Override

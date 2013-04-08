@@ -10,12 +10,12 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.actionbarsherlock.app.SherlockFragment;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -25,7 +25,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-public class MapsFragment extends Fragment implements HttpAPIResult,  LocationListener{
+public class MapsFragment extends SherlockFragment implements HttpAPIResult,  LocationListener{
 	public static final String ARG_SECTION_NUMBER = "section_number";
 	static final LatLng HOGESCHOOL = new LatLng(52.167009,4.467101 );
 	private GoogleMap map;
