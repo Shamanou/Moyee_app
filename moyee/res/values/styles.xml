@@ -20,4 +20,12 @@
     <style name="mapViewStyle" parent="@android:style/Theme.Black">
     </style>
     
+    <style name="Theme.Styled" parent="Theme.Sherlock.Light.DarkActionBar">
+    <item name="actionBarStyle">@style/Widget.Styled.ActionBar</item>
+</style>
+
+<style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+    <item name="backgroundSplit">@drawable/bg_striped_split</item>
+</style>
+    
 	</resources>
