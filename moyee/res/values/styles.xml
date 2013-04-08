@@ -25,7 +25,6 @@
 </style>
 
 <style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid.Inverse">
-    <item name="backgroundSplit">@drawable/bg_striped_split</item>
 </style>
     
 	</resources>
