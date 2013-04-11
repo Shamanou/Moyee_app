@@ -1,5 +1,8 @@
 package hsl.groep5.moyee;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.util.Log;
@@ -13,6 +16,7 @@ import android.widget.TextView;
 
 public class ImageAdapter extends BaseAdapter implements OnClickListener{
     Context mContext;
+    JSONArray dataArray;
     public static final int ACTIVITY_CREATE = 10;
     
     public ImageAdapter(Context c){
@@ -22,7 +26,10 @@ public class ImageAdapter extends BaseAdapter implements OnClickListener{
 
 	@Override
 	public int getCount() {
-		return 5;
+		if(this.dataArray != null) {
+			return this.dataArray.length();
+		}
+		return 0;
 	}
 
 	
@@ -37,6 +44,11 @@ public class ImageAdapter extends BaseAdapter implements OnClickListener{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	public void setJSONArray(JSONArray array) {
+		this.dataArray = array;
+		
+	}
 
 	@Override
 	 public View getView(int position, View convertView, ViewGroup parent) {
@@ -45,7 +57,12 @@ public class ImageAdapter extends BaseAdapter implements OnClickListener{
          LayoutInflater li = (LayoutInflater) mContext.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
          v = li.inflate(R.layout.koffieshopview, null);
          TextView tv = (TextView)v.findViewById(R.id.icon_text);
-         tv.setText("Profile "+position);
+         try {
+			tv.setText(this.dataArray.getJSONObject(position).getString("title"));
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
          ImageView iv = (ImageView)v.findViewById(R.id.icon_image);
          iv.setImageResource(R.drawable.bonen);
          v.setOnClickListener(this);
