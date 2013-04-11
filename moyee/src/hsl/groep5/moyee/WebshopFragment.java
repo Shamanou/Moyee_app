@@ -30,7 +30,7 @@ public class WebshopFragment extends SupportMapFragment implements
 			Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
 		Log.d("CHECK", "FragmentOption2 onCreateView()");
-		View rootView = inflater.inflate(R.layout.fragmentoption2, null);
+		View rootView = inflater.inflate(R.layout.shopview, null);
 		grid_main = (GridView) rootView
 				.findViewById(R.id.welcome_option2_items);
 		this.imageAdapter = new ImageAdapter(this.getActivity());

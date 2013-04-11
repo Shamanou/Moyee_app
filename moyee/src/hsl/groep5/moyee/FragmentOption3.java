@@ -14,7 +14,7 @@ public class FragmentOption3 extends Fragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {	
 		super.onCreateView(inflater, container, savedInstanceState);
 		Log.d("CHECK", "FragmentOption3 onCreateView()");
-		View rootView = inflater.inflate(R.layout.fragmentoption3, null);		
+		View rootView = inflater.inflate(R.layout.scannerview, null);		
 		return rootView;
 	}
 }

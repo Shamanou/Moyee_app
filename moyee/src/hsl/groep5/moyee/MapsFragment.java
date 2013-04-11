@@ -39,7 +39,7 @@ public class MapsFragment extends Fragment implements HttpAPIResult,  LocationLi
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
 		Log.d("CHECK", "FragmentOption1 onCreateView()");
-		View rootView = inflater.inflate(R.layout.fragmentoption1, null);
+		View rootView = inflater.inflate(R.layout.mapview, null);
 		
 		 map = ((SupportMapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		 map.moveCamera(CameraUpdateFactory.newLatLngZoom(HOGESCHOOL, 15));
