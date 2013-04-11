@@ -9,4 +9,7 @@
     <string name="welcome_option2">Koffie kopen</string>
     <string name="welcome_option3">Koffiescanner</string>
 	<string name="welcome_option2_button">Bestel koffie</string>
+	<string name="username">Gebruikersnaam</string>
+	<string name="email">E-mail</string>
+	<string name="login">Inloggen</string>
 </resources>
