@@ -12,4 +12,5 @@
 	<string name="username">Gebruikersnaam</string>
 	<string name="email">E-mail</string>
 	<string name="login">Inloggen</string>
+	<string name="checkbox">Onthoud mijn gegevens</string>
 </resources>

@@ -68,4 +68,14 @@
         android:background="@drawable/moyee_button"
         android:text="@string/login" />
 
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ImageView1"
+        android:layout_below="@+id/login"
+        android:gravity="center|center_horizontal"
+        android:text="@string/checkbox"
+        android:textColor="#FFFFFF" />
+
 </RelativeLayout>
