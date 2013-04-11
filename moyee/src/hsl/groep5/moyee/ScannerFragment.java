@@ -1,5 +1,7 @@
 package hsl.groep5.moyee;
 
+import com.actionbarsherlock.app.SherlockFragment;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -7,7 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+<<<<<<< HEAD:moyee/src/hsl/groep5/moyee/FragmentOption3.java
+public class FragmentOption3 extends SherlockFragment{
+=======
 public class ScannerFragment extends Fragment{
+>>>>>>> origin/main:moyee/src/hsl/groep5/moyee/ScannerFragment.java
 	public static final String ARG_SECTION_NUMBER = "section_number";	
 
 	@Override
