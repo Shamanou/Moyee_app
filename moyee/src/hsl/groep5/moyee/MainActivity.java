@@ -9,15 +9,15 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
 
-public class MainActivity  extends FragmentActivity{
+public class MainActivity  extends FragmentActivity {
 	PagerAdapter mPagerAdapter;
 	ViewPager mViewPager;
 	ArrayList<Fragment> fragments = new ArrayList<Fragment>();
 	ArrayList<String> titles = new ArrayList<String>();
 	MapsFragment gmaps = new MapsFragment();
 	WebshopFragment webshop = new WebshopFragment();
-	ScannerFragment fragment3 = new ScannerFragment();
-	WelcomeFragment fragmentWelcome = new WelcomeFragment();
+	FragmentOption3 fragment3 = new FragmentOption3();
+	FragmentWelcome fragmentWelcome = new FragmentWelcome();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
