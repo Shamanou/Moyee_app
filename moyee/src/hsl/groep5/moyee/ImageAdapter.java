@@ -1,5 +1,7 @@
 package hsl.groep5.moyee;
 
+import java.util.ArrayList;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -16,7 +18,7 @@ import android.widget.TextView;
 
 public class ImageAdapter extends BaseAdapter implements OnClickListener{
     Context mContext;
-    JSONArray dataArray;
+    ArrayList<Product> products;
     public static final int ACTIVITY_CREATE = 10;
     
     public ImageAdapter(Context c){
@@ -26,8 +28,8 @@ public class ImageAdapter extends BaseAdapter implements OnClickListener{
 
 	@Override
 	public int getCount() {
-		if(this.dataArray != null) {
-			return this.dataArray.length();
+		if(this.products != null) {
+			return this.products.size();
 		}
 		return 0;
 	}
@@ -45,8 +47,8 @@ public class ImageAdapter extends BaseAdapter implements OnClickListener{
 		return 0;
 	}
 	
-	public void setJSONArray(JSONArray array) {
-		this.dataArray = array;
+	public void setProducts(ArrayList<Product> products) {
+		this.products = products;
 		
 	}
 
@@ -57,12 +59,9 @@ public class ImageAdapter extends BaseAdapter implements OnClickListener{
          LayoutInflater li = (LayoutInflater) mContext.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
          v = li.inflate(R.layout.koffieshopview, null);
          TextView tv = (TextView)v.findViewById(R.id.icon_text);
-         try {
-			tv.setText(this.dataArray.getJSONObject(position).getString("title"));
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+         tv.setText(this.products.get(position).getTitle());
+
          ImageView iv = (ImageView)v.findViewById(R.id.icon_image);
          iv.setImageResource(R.drawable.bonen);
          v.setOnClickListener(this);
@@ -78,7 +77,6 @@ public class ImageAdapter extends BaseAdapter implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		v.setBackgroundColor(Color.GRAY);
-		
 	}
 	
 

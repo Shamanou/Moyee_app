@@ -1,5 +1,7 @@
 package hsl.groep5.moyee;
 
+import java.util.ArrayList;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -46,8 +48,14 @@ public class WebshopFragment extends SupportMapFragment implements
 	
 			// haal de array 'data' uit het object	
 			JSONArray data = jsonObject.getJSONArray("data");
-	
-			this.imageAdapter.setJSONArray(data);
+			ArrayList<Product> products = new ArrayList<Product>();
+			for (int i = 0; i < data.length(); i++) {
+		         //pak een item uit de array
+		        JSONObject item = data.getJSONObject(i);
+		        Product p = new Product(item);
+		        products.add(p);
+			}
+			this.imageAdapter.setProducts(products);
 			grid_main.invalidateViews();
 		} catch (JSONException e) {
 			
