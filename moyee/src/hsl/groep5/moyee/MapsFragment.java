@@ -10,6 +10,8 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -135,4 +137,12 @@ public class MapsFragment extends SherlockFragment implements HttpAPIResult,  Lo
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void onDestroyView() {
+        super.onDestroyView(); 
+        Fragment fragment = (getFragmentManager().findFragmentById(R.id.map));  
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+        ft.remove(fragment);
+        ft.commit();
+}
 }
