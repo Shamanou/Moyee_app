@@ -10,12 +10,12 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.actionbarsherlock.app.SherlockFragment;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -25,7 +25,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-public class MapsFragment extends Fragment implements HttpAPIResult,  LocationListener{
+public class MapsFragment extends SherlockFragment implements HttpAPIResult,  LocationListener{
 	public static final String ARG_SECTION_NUMBER = "section_number";
 	static final LatLng HOGESCHOOL = new LatLng(52.167009,4.467101 );
 	private GoogleMap map;
@@ -33,13 +33,12 @@ public class MapsFragment extends Fragment implements HttpAPIResult,  LocationLi
 	private LocationManager locationManager;
 	private String provider;
 
-
-	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
 		Log.d("CHECK", "FragmentOption1 onCreateView()");
-		View rootView = inflater.inflate(R.layout.fragmentoption1, null);
+
+		View rootView = inflater.inflate(R.layout.mapview, null);
 		
 		 map = ((SupportMapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		 map.moveCamera(CameraUpdateFactory.newLatLngZoom(HOGESCHOOL, 15));
@@ -57,8 +56,7 @@ public class MapsFragment extends Fragment implements HttpAPIResult,  LocationLi
 
 	
 		new HttpAPI(this).execute("http://mike.k0k.nl/moyeeapi.php?get=locations");
-		 
-		
+		 		
 		return rootView;
 	}
 
@@ -120,20 +118,17 @@ public class MapsFragment extends Fragment implements HttpAPIResult,  LocationLi
 		
 	}
 
-
 	@Override
 	public void onProviderDisabled(String arg0) {
 		// TODO Auto-generated method stub
 		
 	}
 
-
 	@Override
 	public void onProviderEnabled(String arg0) {
 		// TODO Auto-generated method stub
 		
 	}
-
 
 	@Override
 	public void onStatusChanged(String arg0, int arg1, Bundle arg2) {

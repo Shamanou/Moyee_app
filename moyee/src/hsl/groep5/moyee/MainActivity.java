@@ -4,19 +4,18 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.Menu;
 
-public class MainActivity  extends FragmentActivity {
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+
+public class MainActivity  extends SherlockFragmentActivity {
 	PagerAdapter mPagerAdapter;
 	ViewPager mViewPager;
 	ArrayList<Fragment> fragments = new ArrayList<Fragment>();
 	ArrayList<String> titles = new ArrayList<String>();
 	MapsFragment gmaps = new MapsFragment();
 	WebshopFragment webshop = new WebshopFragment();
-	FragmentOption3 fragment3 = new FragmentOption3();
 	FragmentWelcome fragmentWelcome = new FragmentWelcome();
 	
 	@Override
@@ -34,16 +33,9 @@ public class MainActivity  extends FragmentActivity {
 		fragments.add(gmaps);
 		fragments.add(fragmentWelcome);
 		fragments.add(webshop);
-		fragments.add(fragment3);
 		
 		mViewPager = (ViewPager)findViewById(R.id.pager);
 		mViewPager.setAdapter(mPagerAdapter); 
 		mViewPager.setCurrentItem(2);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
 	}
 }
