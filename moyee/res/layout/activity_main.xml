@@ -12,7 +12,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
     
- 
     <hsl.groep5.moyee.CustomViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"

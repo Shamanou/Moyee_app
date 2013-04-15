@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.WindowManager;
 
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
 
 public class MainActivity  extends SherlockFragmentActivity {
 	PagerAdapter mPagerAdapter;
@@ -17,11 +21,14 @@ public class MainActivity  extends SherlockFragmentActivity {
 	MapsFragment gmaps = new MapsFragment();
 	WebshopFragment webshop = new WebshopFragment();
 	FragmentWelcome fragmentWelcome = new FragmentWelcome();
+	ActionBar actionbar;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Log.d("CHECK", "MainActivity onCreate()");
+		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 		setContentView(R.layout.activity_main);
 		
 		mPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments, titles);
@@ -37,5 +44,14 @@ public class MainActivity  extends SherlockFragmentActivity {
 		mViewPager = (ViewPager)findViewById(R.id.pager);
 		mViewPager.setAdapter(mPagerAdapter); 
 		mViewPager.setCurrentItem(2);
+		
+		actionbar = getSupportActionBar();			
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    MenuInflater inflater = getSupportMenuInflater();
+	    inflater.inflate(R.menu.main, menu);
+	    return true;
 	}
 }
