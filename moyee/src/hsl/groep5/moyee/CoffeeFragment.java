@@ -16,7 +16,7 @@ import android.widget.ListView;
 import com.actionbarsherlock.app.SherlockFragment;
 
 public class CoffeeFragment extends SherlockFragment implements HttpAPIResult {
-	private ListAdapter listadapter;
+	private InfoAdapter listadapter;
 	private ListView listview;
 	
 	@Override
@@ -24,9 +24,10 @@ public class CoffeeFragment extends SherlockFragment implements HttpAPIResult {
 		super.onCreateView(inflater, container, savedInstanceState);
 		Log.d("CHECK", "FragmentOption3 onCreateView()");
 		View rootView = inflater.inflate(R.layout.koffieview, null);
+		Log.d("","view created..");
 		listview = (ListView) rootView.findViewById(R.id.coffee_list);
-		this.listadapter = new ListAdapter(this.getActivity());
-		listview.setAdapter(this.listadapter);
+		this.listadapter = new InfoAdapter(this.getActivity());
+		listview.setAdapter(listadapter);
 		new HttpAPI(this).execute("http://mike.k0k.nl/moyeeapi.php?get=products");
 		return rootView;
 	}
@@ -46,10 +47,10 @@ public class CoffeeFragment extends SherlockFragment implements HttpAPIResult {
 		        Product p = new Product(item);
 		        products.add(p);
 			}
+			this.listadapter.setProducts(products);
+			this.listview.invalidateViews();
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-		this.listadapter.setProducts(products);
-		this.listview.invalidateViews();
 	}
 }
