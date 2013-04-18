@@ -23,6 +23,7 @@ public class MainActivity  extends SherlockFragmentActivity {
 	MapsFragment gmaps = new MapsFragment();
 	WebshopFragment webshop = new WebshopFragment();
 	FragmentWelcome fragmentWelcome = new FragmentWelcome();
+	CoffeeFragment coffeeFragment = new CoffeeFragment();
 	ActionBar actionbar;
 	
 	@Override
@@ -43,6 +44,7 @@ public class MainActivity  extends SherlockFragmentActivity {
 		fragments.add(gmaps);
 		fragments.add(fragmentWelcome);
 		fragments.add(webshop);
+		fragments.add(coffeeFragment);
 		
 		mViewPager = (ViewPager)findViewById(R.id.pager);
 		mViewPager.setAdapter(mPagerAdapter); 

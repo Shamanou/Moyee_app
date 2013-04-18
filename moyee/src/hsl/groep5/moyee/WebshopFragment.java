@@ -59,7 +59,5 @@ public class WebshopFragment extends SupportMapFragment implements HttpAPIResult
 			
 			e.printStackTrace();
 		}
-
 	}
-
 }
