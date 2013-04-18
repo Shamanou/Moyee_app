@@ -23,7 +23,6 @@ public class MainActivity  extends SherlockFragmentActivity {
 	WebshopFragment webshop = new WebshopFragment();
 	FragmentWelcome fragmentWelcome = new FragmentWelcome();
 	ActionBar actionbar;
-	ArrayList<Drawable> icons = new ArrayList<Drawable>(); 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,16 +32,12 @@ public class MainActivity  extends SherlockFragmentActivity {
 
 		setContentView(R.layout.activity_main);
 		
-		mPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments, titles, icons);
+		mPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments, titles);
 		
 		titles.add(getResources().getString(R.string.welcome_option1));
 		titles.add(getResources().getString(R.string.welcome_option));
 		titles.add(getResources().getString(R.string.welcome_option2));
 		titles.add(getResources().getString(R.string.welcome_option3));
-		
-		icons.add(getResources().getDrawable(R.drawable.map));
-		icons.add(getResources().getDrawable(R.drawable.about));
-		icons.add(getResources().getDrawable(R.drawable.marker));
 		
 		fragments.add(gmaps);
 		fragments.add(fragmentWelcome);

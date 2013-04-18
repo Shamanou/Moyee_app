@@ -2,6 +2,12 @@
    <item
       android:id="@+id/menu"
       android:icon="@drawable/settings"
-      android:showAsAction="ifRoom|withText"
-      android:title="menu"/>
+      android:showAsAction="ifRoom|withText">
+          <menu>
+            <item
+                android:id="@+id/translate"
+                android:title="@string/translate">
+            </item>
+        </menu>
+	</item>
 </menu>

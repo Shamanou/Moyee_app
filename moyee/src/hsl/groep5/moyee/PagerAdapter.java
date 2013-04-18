@@ -14,12 +14,10 @@ import android.text.style.ImageSpan;
 public class PagerAdapter extends FragmentStatePagerAdapter{
 	private List <Fragment> fragmentlist;
 	private List <String> titles;
-	private ArrayList<Drawable> icons;
-	public PagerAdapter(FragmentManager fm,ArrayList<Fragment> f, ArrayList<String> t,ArrayList<Drawable> d) {
+	public PagerAdapter(FragmentManager fm,ArrayList<Fragment> f, ArrayList<String> t) {
 		super(fm);
 		this.fragmentlist = f;
 		this.titles = t;
-		this.icons = d;
 	}
 
 	@Override
@@ -34,11 +32,6 @@ public class PagerAdapter extends FragmentStatePagerAdapter{
 	
 	@Override
 	public CharSequence getPageTitle(int position){
-		Drawable drawable = icons.get(position);
-		SpannableStringBuilder sb = new SpannableStringBuilder(String.valueOf(position));
-		drawable.setBounds(0,0,drawable.getIntrinsicWidth(),drawable.getIntrinsicHeight());
-		ImageSpan span = new ImageSpan(drawable,ImageSpan.ALIGN_BASELINE);
-		sb.setSpan(span, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-		return sb;
+		return titles.get(position);
 	}
 }
