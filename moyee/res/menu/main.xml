@@ -8,6 +8,10 @@
                 android:id="@+id/translate"
                 android:title="@string/translate">
             </item>
+            <item
+                android:id="@+id/userdata"
+                android:title="@string/userdata">
+            </item>
         </menu>
 	</item>
 </menu>

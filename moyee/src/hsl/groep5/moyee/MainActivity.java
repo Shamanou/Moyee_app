@@ -23,6 +23,7 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 
 public class MainActivity extends SherlockFragmentActivity {
 	PagerAdapter mPagerAdapter;
@@ -67,9 +68,9 @@ public class MainActivity extends SherlockFragmentActivity {
 		SharedPreferences settings = this.getSharedPreferences("settings", 0);
 		String name = settings.getString("name", "" );
 		String email = settings.getString("email", "" );
-//		if(name.equals("") || email.equals("")) {
+		if(name.equals("") || email.equals("")) {
 			showLogin();
-//		}
+		}
 	}
 	
 	@Override
@@ -77,6 +78,20 @@ public class MainActivity extends SherlockFragmentActivity {
 	    MenuInflater inflater = getSupportMenuInflater();
 	    inflater.inflate(R.menu.main, menu);
 	    return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.translate:
+	            return true;
+	        case R.id.userdata:
+	            this.showLogin();
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
 	}
 	
 	public void showLogin () {
