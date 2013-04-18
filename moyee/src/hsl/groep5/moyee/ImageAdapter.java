@@ -12,11 +12,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ImageAdapter extends BaseAdapter implements OnClickListener{
+public class ImageAdapter extends BaseAdapter implements OnItemClickListener{
     Context mContext;
     ArrayList<Product> products;
     public static final int ACTIVITY_CREATE = 10;
@@ -64,7 +66,7 @@ public class ImageAdapter extends BaseAdapter implements OnClickListener{
 
          ImageView iv = (ImageView)v.findViewById(R.id.icon_image);
          iv.setImageResource(R.drawable.bonen);
-         v.setOnClickListener(this);
+
         }
         else
         {
@@ -75,9 +77,14 @@ public class ImageAdapter extends BaseAdapter implements OnClickListener{
 
 
 	@Override
-	public void onClick(View v) {
-		v.setBackgroundColor(Color.GRAY);
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+		Log.d(" ", "ttttt");
+		
 	}
+
+
+
+
 	
 
 }
