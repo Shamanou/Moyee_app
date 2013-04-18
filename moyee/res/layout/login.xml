@@ -10,16 +10,17 @@
      <requestFocus />
      
      <EditText
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:ems="10"
-        android:hint="@string/username"
-        android:inputType="text"
-        android:singleLine="true" />
+         android:id="@+id/username"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true"
+         android:ems="10"
+         android:hint="@string/username"
+         android:inputType="text"
+         android:singleLine="true"
+         android:textColor="#FFFFFF" />
 
     <EditText
         android:id="@+id/email"
@@ -30,7 +31,8 @@
         android:layout_below="@+id/username"
         android:ems="10"
         android:hint="@string/email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/save"
