@@ -98,7 +98,7 @@ public class MainActivity extends SherlockFragmentActivity {
 		//set up dialog
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.login);
-        dialog.setTitle("Login");
+        dialog.setTitle("Inloggen");
         dialog.setCancelable(false);
         
         
