@@ -26,6 +26,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:background="@color/green" />
+            android:background="@color/dark_blue" 
+            android:textColor="#fff"/>
     </hsl.groep5.moyee.CustomViewPager>
 </RelativeLayout>
