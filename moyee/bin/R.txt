@@ -333,6 +333,7 @@ int id showTitle 0x7f040007
 int id tabMode 0x7f040003
 int id tabStrip 0x7f040039
 int id terrain 0x7f040012
+int id translate 0x7f040049
 int id useLogo 0x7f040004
 int id username 0x7f04003d
 int id welcome_message 0x7f040047
@@ -412,6 +413,7 @@ int string common_google_play_services_update_title 0x7f090016
 int string common_signin_button_text_long 0x7f09001c
 int string email 0x7f090029
 int string login 0x7f09002a
+int string translate 0x7f09002c
 int string username 0x7f090028
 int string welcome_message 0x7f090022
 int string welcome_option 0x7f090023

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.WindowManager;
@@ -47,7 +48,10 @@ public class MainActivity  extends SherlockFragmentActivity {
 		mViewPager.setAdapter(mPagerAdapter); 
 		mViewPager.setCurrentItem(2);
 		
-		actionbar = getSupportActionBar();			
+		actionbar = getSupportActionBar();
+		
+	    PagerTabStrip strip = (PagerTabStrip)findViewById(R.id.tabStrip);
+	    strip.setTabIndicatorColor(getResources().getColor(R.color.green));
 	}
 	
 	@Override
