@@ -1,49 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-	 <RelativeLayout
-	 xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/dark_blue"
-    android:orientation="vertical" >
-    
-
-    <!-- Login Image -->
-
-    <!-- layout for Username -->
-
-    <!-- layout for Email -->
-
-    <ImageView
-        android:id="@+id/ImageView1"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:padding="20dp"
-        android:src="@drawable/fairchain_coffee" />
-
-    
-    <EditText
+	 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	     android:id="@+id/RelativeLayout1"
+	     android:layout_width="fill_parent"
+	     android:layout_height="fill_parent"
+	     android:background="@color/dark_blue"
+	     android:orientation="vertical"
+	     android:padding="10dp" >
+	     
+     <requestFocus />
+     
+     <EditText
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_weight="1.0"
+        android:layout_alignParentTop="true"
         android:ems="10"
         android:hint="@string/username"
-        android:inputType="text" 
-        android:singleLine="true"
-       
-            android:layout_marginTop="5dip"
-                android:layout_marginBottom="20dip"
-                />
-
-        <requestFocus />
- 
+        android:inputType="text"
+        android:singleLine="true" />
 
     <EditText
         android:id="@+id/email"
@@ -52,30 +28,31 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/username"
-        android:layout_weight="1.0"
         android:ems="10"
         android:hint="@string/email"
-        android:inputType="text" />
+        android:inputType="textEmailAddress" />
 
     <Button
-        android:id="@+id/login"
-        android:layout_width="match_parent"
+        android:id="@+id/save"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_below="@+id/email"
-        android:layout_margin="10dp"
-        android:layout_marginTop="62dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/moyee_button"
-        android:text="@string/login" />
+        android:text="@string/save" />
 
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/skip"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView1"
-        android:layout_below="@+id/login"
-        android:gravity="center|center_horizontal"
-        android:text="@string/checkbox"
-        android:textColor="#FFFFFF" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/save"
+        android:background="@drawable/moyee_button"
+        android:text="@string/skip" />
 
 </RelativeLayout>
