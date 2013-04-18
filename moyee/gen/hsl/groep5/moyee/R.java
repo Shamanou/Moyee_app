@@ -1120,6 +1120,7 @@ containing a value of this type.
         public static final int tabMode=0x7f040003;
         public static final int tabStrip=0x7f040039;
         public static final int terrain=0x7f040012;
+        public static final int translate=0x7f040049;
         public static final int useLogo=0x7f040004;
         public static final int username=0x7f04003d;
         public static final int welcome_message=0x7f040047;
@@ -1282,6 +1283,7 @@ containing a value of this type.
         public static final int common_signin_button_text_long=0x7f09001c;
         public static final int email=0x7f090029;
         public static final int login=0x7f09002a;
+        public static final int translate=0x7f09002c;
         public static final int username=0x7f090028;
         public static final int welcome_message=0x7f090022;
         public static final int welcome_option=0x7f090023;
