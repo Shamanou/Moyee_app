@@ -2,16 +2,22 @@ package hsl.groep5.moyee;
 
 import java.util.ArrayList;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.util.Log;
+import android.util.Xml.Encoding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class InfoAdapter extends BaseAdapter implements OnClickListener{
+public class InfoAdapter extends BaseAdapter implements OnItemClickListener{
 	private final Context context;
 	private ArrayList<Product> products;
 	
@@ -37,10 +43,7 @@ public class InfoAdapter extends BaseAdapter implements OnClickListener{
 		return v;
 	}
 
-	@Override
-	public void onClick(View v) {
-		
-	}
+	
 
 	@Override
 	public int getCount() {
@@ -65,5 +68,24 @@ public class InfoAdapter extends BaseAdapter implements OnClickListener{
 	public void setProducts(ArrayList<Product> products) {
 		this.products = products;
 		Log.d("","view created2..");
+	}
+	
+	public void showInformation(Product product) {
+		//set up dialog
+        final Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.informationview);
+        dialog.setTitle("Informatie");
+        dialog.setCancelable(true);
+
+		WebView code = (WebView) dialog.findViewById(R.id.webView);
+		code.loadData("<html><body><b>test</b></body></html>", "text/html", Encoding.UTF_8.toString());
+		
+        //now that the dialog is set up, it's time to show it    
+        dialog.show();
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> a, View v, int i, long l) {
+		showInformation(products.get(i));
 	}
 }

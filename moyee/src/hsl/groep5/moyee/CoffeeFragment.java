@@ -11,10 +11,12 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Xml.Encoding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -35,6 +37,7 @@ public class CoffeeFragment extends SherlockFragment implements HttpAPIResult {
 		listview = (ListView) rootView.findViewById(R.id.coffee_list);
 		this.listadapter = new InfoAdapter(this.getActivity());
 		listview.setAdapter(listadapter);
+		listview.setOnItemClickListener(listadapter);
 		new HttpAPI(this).execute("http://mike.k0k.nl/moyeeapi.php?get=products");
 		return rootView;
 	}
@@ -59,51 +62,5 @@ public class CoffeeFragment extends SherlockFragment implements HttpAPIResult {
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-	}
-	
-	public void showInformation() {
-		//set up dialog
-        final Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.informationview);
-        dialog.setTitle("Login");
-        dialog.setCancelable(false);
-        
-        
-        
-        SharedPreferences settings = getSharedPreferences("settings", 0);
-		String name = settings.getString("name", "" );
-		String email = settings.getString("email", "" );
-		
-		EditText txtName = (EditText) dialog.findViewById(R.id.username);
-		txtName.setText(name);
-		
-		TextView txtEmail = (TextView) dialog.findViewById(R.id.email);
-		txtEmail.setText(email);
-        
-        //set up button
-        Button btnSave = (Button) dialog.findViewById(R.id.save);
-        btnSave.setOnClickListener(new OnClickListener() {
-        @Override
-            public void onClick(View v) {
-	        	SharedPreferences settings = getSharedPreferences("settings", 0);
-	        	Editor edit = settings.edit();
-	        	EditText txtName = (EditText) dialog.findViewById(R.id.username);
-	        	edit.putString("name", txtName.getText().toString());
-	        	EditText txtEmail = (EditText) dialog.findViewById(R.id.email);
-	        	edit.putString("email", txtEmail.getText().toString());
-	        	edit.commit();
-	        	dialog.dismiss();
-            }
-        });
-        
-        Button btnSkip = (Button) dialog.findViewById(R.id.skip);
-        btnSkip.setOnClickListener(new OnClickListener() {
-        @Override
-            public void onClick(View v) {
-	        	dialog.dismiss();
-            }
-        });
-        //now that the dialog is set up, it's time to show it    
-        dialog.show();
 	}
 }
