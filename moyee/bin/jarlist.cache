@@ -1,7 +1,14 @@
 # cache for current jar dependecy. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
+<<<<<<< HEAD
 1366368980000 393154 307c1cc532eabbf1d135b43e5c983c9da700449d /home/citroen/git/Moyee_app2/moyee/libs/android-support-v4.jar
 1365425090000 393154 307c1cc532eabbf1d135b43e5c983c9da700449d /home/citroen/ActionBarSherlock/library/libs/android-support-v4.jar
 1366368980000 380912 2b1fa7915f859dfc49f506db64fdf1374e2a5497 /home/citroen/git/Moyee_app2/moyee/libs/google-play-services.jar
 1365160872000 380912 2b1fa7915f859dfc49f506db64fdf1374e2a5497 /home/citroen/Dropbox/ipmed4/libs/google-play-services_lib/libs/google-play-services.jar
+=======
+1365683654303 393154 307c1cc532eabbf1d135b43e5c983c9da700449d C:\Users\Aart\git\Moyee_app\moyee\libs\android-support-v4.jar
+1365425090000 393154 307c1cc532eabbf1d135b43e5c983c9da700449d C:\Users\Aart\Dropbox\ipmed4\libs\actionbarsherlock\libs\android-support-v4.jar
+1365675025431 380912 2b1fa7915f859dfc49f506db64fdf1374e2a5497 C:\Users\Aart\git\Moyee_app\moyee\libs\google-play-services.jar
+1364459247681 380912 2b1fa7915f859dfc49f506db64fdf1374e2a5497 C:\google-play-services_lib\libs\google-play-services.jar
+>>>>>>> refs/remotes/origin/main

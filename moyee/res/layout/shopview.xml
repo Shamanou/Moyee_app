@@ -15,10 +15,10 @@
 	    android:layout_above="@+id/welcome_option2_button"
 	    android:background="#202543"
 	    android:columnWidth="@dimen/activity_horizontal_margin"
-	    android:numColumns="2"
+	    android:numColumns="1"
 	    android:stretchMode="columnWidth"
 	    android:textColor="#49B848"
-	    android:verticalSpacing="13dp" >
+	    android:verticalSpacing="5dp" >
 
 	</GridView>
 

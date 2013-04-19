@@ -1047,17 +1047,19 @@ containing a value of this type.
         public static final int abs__textfield_searchview_right_holo_dark=0x7f02006e;
         public static final int abs__textfield_searchview_right_holo_light=0x7f02006f;
         public static final int bonen=0x7f020070;
-        public static final int fairchain_coffee=0x7f020071;
-        public static final int ic_launcher=0x7f020072;
-        public static final int map=0x7f020073;
-        public static final int marker=0x7f020074;
-        public static final int moyee_button=0x7f020075;
-        public static final int settings=0x7f020076;
+        public static final int espresso=0x7f020071;
+        public static final int fairchain_coffee=0x7f020072;
+        public static final int ic_launcher=0x7f020073;
+        public static final int map=0x7f020074;
+        public static final int marker=0x7f020075;
+        public static final int moyee_button=0x7f020076;
+        public static final int settings=0x7f020077;
+        public static final int special=0x7f020078;
+        public static final int standaard=0x7f020079;
     }
     public static final class id {
-        public static final int ImageView1=0x7f04003f;
         public static final int RelativeLayout1=0x7f040037;
-        public static final int ScrollView1=0x7f040048;
+        public static final int ScrollView1=0x7f04004a;
         public static final int abs__action_bar=0x7f040026;
         public static final int abs__action_bar_container=0x7f040025;
         public static final int abs__action_bar_subtitle=0x7f040015;
@@ -1098,38 +1100,42 @@ containing a value of this type.
         public static final int abs__title=0x7f04001f;
         public static final int abs__titleDivider=0x7f040020;
         public static final int abs__up=0x7f04000f;
-        public static final int checkBox1=0x7f040043;
-        public static final int coffee_list=0x7f04003e;
+        public static final int button_add=0x7f040040;
+        public static final int button_sub=0x7f04003e;
+        public static final int coffee_list=0x7f040041;
         public static final int disableHome=0x7f04000d;
         public static final int edit_query=0x7f04002b;
-        public static final int email=0x7f040041;
+        public static final int email=0x7f040043;
         public static final int homeAsUp=0x7f04000a;
         public static final int hybrid=0x7f040004;
         public static final int icon_image=0x7f04003c;
         public static final int icon_text=0x7f04003d;
         public static final int listMode=0x7f040006;
-        public static final int login=0x7f040042;
-        public static final int map=0x7f040044;
-        public static final int menu=0x7f04004a;
+        public static final int map=0x7f040046;
+        public static final int menu=0x7f04004c;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
         public static final int pager=0x7f040038;
         public static final int row=0x7f04003b;
         public static final int satellite=0x7f040002;
+        public static final int save=0x7f040044;
         public static final int showCustom=0x7f04000c;
         public static final int showHome=0x7f040009;
         public static final int showTitle=0x7f04000b;
+        public static final int skip=0x7f040045;
         public static final int tabMode=0x7f040007;
         public static final int tabStrip=0x7f040039;
         public static final int terrain=0x7f040003;
-        public static final int translate=0x7f04004b;
+        public static final int textCount=0x7f04003f;
+        public static final int translate=0x7f04004d;
         public static final int useLogo=0x7f040008;
-        public static final int username=0x7f040040;
+        public static final int userdata=0x7f04004e;
+        public static final int username=0x7f040042;
         public static final int webView=0x7f04003a;
-        public static final int welcome_message=0x7f040049;
-        public static final int welcome_option2=0x7f040045;
-        public static final int welcome_option2_button=0x7f040047;
-        public static final int welcome_option2_items=0x7f040046;
+        public static final int welcome_message=0x7f04004b;
+        public static final int welcome_option2=0x7f040047;
+        public static final int welcome_option2_button=0x7f040049;
+        public static final int welcome_option2_items=0x7f040048;
         public static final int wrap_content=0x7f040005;
     }
     public static final class integer {
@@ -1231,7 +1237,6 @@ containing a value of this type.
         /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
          */
         public static final int auth_client_requested_by_msg=0x7f050010;
-        public static final int checkbox=0x7f05002b;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -1286,8 +1291,10 @@ containing a value of this type.
          */
         public static final int common_signin_button_text_long=0x7f05000d;
         public static final int email=0x7f050029;
-        public static final int login=0x7f05002a;
+        public static final int save=0x7f05002a;
+        public static final int skip=0x7f05002b;
         public static final int translate=0x7f05002c;
+        public static final int userdata=0x7f05002d;
         public static final int username=0x7f050028;
         public static final int welcome_message=0x7f050022;
         public static final int welcome_option=0x7f050023;

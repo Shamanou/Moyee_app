@@ -12,11 +12,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ImageAdapter extends BaseAdapter implements OnClickListener{
+public class ImageAdapter extends BaseAdapter implements OnItemClickListener{
     Context mContext;
     ArrayList<Product> products;
     public static final int ACTIVITY_CREATE = 10;
@@ -61,10 +63,21 @@ public class ImageAdapter extends BaseAdapter implements OnClickListener{
          TextView tv = (TextView)v.findViewById(R.id.icon_text);
 
          tv.setText(this.products.get(position).getTitle());
-
+         Log.d(this.products.get(position).getImageUrl(), " test");
          ImageView iv = (ImageView)v.findViewById(R.id.icon_image);
-         iv.setImageResource(R.drawable.bonen);
-         v.setOnClickListener(this);
+         if(this.products.get(position).getImageUrl().equals("a")){
+	         iv.setImageResource(R.drawable.bonen);
+	         }
+	         else if(this.products.get(position).getImageUrl().equals("b")){
+	             iv.setImageResource(R.drawable.standaard);
+	             }
+	         else if(this.products.get(position).getImageUrl().equals("c")){
+	             iv.setImageResource(R.drawable.special);
+	             }
+	         else if(this.products.get(position).getImageUrl().equals("d")){
+	             iv.setImageResource(R.drawable.espresso);
+	          }
+         
         }
         else
         {
@@ -75,9 +88,14 @@ public class ImageAdapter extends BaseAdapter implements OnClickListener{
 
 
 	@Override
-	public void onClick(View v) {
-		v.setBackgroundColor(Color.GRAY);
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+
+		
 	}
+
+
+
+
 	
 
 }
