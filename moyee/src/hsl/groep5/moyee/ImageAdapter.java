@@ -63,10 +63,21 @@ public class ImageAdapter extends BaseAdapter implements OnItemClickListener{
          TextView tv = (TextView)v.findViewById(R.id.icon_text);
 
          tv.setText(this.products.get(position).getTitle());
-
+         Log.d(this.products.get(position).getImageUrl(), " test");
          ImageView iv = (ImageView)v.findViewById(R.id.icon_image);
-         iv.setImageResource(R.drawable.bonen);
-
+         if(this.products.get(position).getImageUrl().equals("a")){
+	         iv.setImageResource(R.drawable.bonen);
+	         }
+	         else if(this.products.get(position).getImageUrl().equals("b")){
+	             iv.setImageResource(R.drawable.standaard);
+	             }
+	         else if(this.products.get(position).getImageUrl().equals("c")){
+	             iv.setImageResource(R.drawable.special);
+	             }
+	         else if(this.products.get(position).getImageUrl().equals("d")){
+	             iv.setImageResource(R.drawable.espresso);
+	          }
+         
         }
         else
         {
@@ -78,7 +89,7 @@ public class ImageAdapter extends BaseAdapter implements OnItemClickListener{
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-		Log.d(" ", "ttttt");
+
 		
 	}
 
