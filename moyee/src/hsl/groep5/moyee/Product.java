@@ -42,6 +42,10 @@ public class Product {
 		return this.description;
 	}
 	
+	public int getCount() {
+		return this.count;
+	}
+	
 	public void addCount() {
 		this.count++;
 	}
