@@ -47,7 +47,11 @@ public class WebshopFragment extends SupportMapFragment implements
 
 			@Override
 			public void onClick(View v) {
-				Log.d("test", "test");
+				for(int i = 0; i < WebshopFragment.this.imageAdapter.products.size(); i++)
+				{
+					Product p = WebshopFragment.this.imageAdapter.products.get(i);
+					Log.d(p.getTitle()+ "  "+ p.getCount(), " test");
+				}
 
 			}
 

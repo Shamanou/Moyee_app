@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 public class ImageAdapter extends BaseAdapter implements OnItemClickListener{
     Context mContext;
-    ArrayList<Product> products;
+    public ArrayList<Product> products;
     public static final int ACTIVITY_CREATE = 10;
     
     public ImageAdapter(Context c){
