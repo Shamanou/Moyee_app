@@ -10,15 +10,16 @@ public class Product {
 	private double price = 0 ;
 	private double size = 0;
 	private String description = "";
+	private int count = 0;
 	
 	public Product(JSONObject obj) {
 		try {
 			this.id = obj.getInt("id");
 			this.title = obj.getString("title");
-			//this.image = obj.getString("image");
+			this.image = obj.getString("image");
 			this.price = obj.getDouble("price");
 			this.size = obj.getDouble("size");
-			//this.description = obj.getString("description");
+			this.description = obj.getString("description");
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -39,5 +40,14 @@ public class Product {
 	}
 	public String getDescription() {
 		return this.description;
+	}
+	
+	public void addCount() {
+		this.count++;
+	}
+	
+	public void subtractCount() {
+		if(this.count > 0) 
+			this.count--;
 	}
 }
