@@ -8,10 +8,10 @@
     <string name="welcome_option2">Koffie kopen</string>
     <string name="welcome_option3">Koffiescanner</string>
 	<string name="welcome_option2_button">Bestel koffie</string>
-	<string name="username">Name</string>
-	<string name="email">E-mail</string>
-	<string name="save">Save</string>
-	<string name="skip">Skip</string>
+	<string name="username">Naam</string>
+	<string name="email">E-mailadres</string>
+	<string name="save">Inloggen</string>
+	<string name="skip">Overslaan</string>
 	<string name="translate">Translate</string>
 	<string name="userdata">UserData</string>
 </resources>
