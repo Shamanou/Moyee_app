@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">moyee</string>
+    <string name="app_name">Moyee Coffee</string>
     <string name="action_settings">Settings</string>
     <string name="welcome_message">INFORMATIE</string>
     <string name="welcome_option">Boodschap</string>
