@@ -1,7 +1,6 @@
 package hsl.groep5.moyee;
 
 import java.util.ArrayList;
-
 import android.app.Dialog;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -18,12 +17,20 @@ import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+
+/**
+* @title Hoofdscherm Moyee Applicatie
+* @author Projectgroep 5
+* @param S1063848
+* @since 04-04-2013
+* @version 1.0
+*/
+
 
 public class MainActivity extends SherlockFragmentActivity {
 	PagerAdapter mPagerAdapter;
