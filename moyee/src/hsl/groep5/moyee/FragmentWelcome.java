@@ -13,7 +13,7 @@ import com.actionbarsherlock.app.SherlockFragment;
 
 /**
 * @title Welkom Fragment Scherm Moyee Applicatie
-* @author Projectgroep 5
+* @author Robbert van der Hulst
 * @param S1063848
 * @since 04-04-2013
 * @version 1.0
@@ -22,6 +22,10 @@ import com.actionbarsherlock.app.SherlockFragment;
 public class FragmentWelcome extends SherlockFragment{
 	public static final String ARG_SECTION_NUMBER = "section_number";	
 
+	/**
+	* Hier wordt er een scherm aangemaakt met de layout met het informatie scherm. 
+	* Ook de font van Moyee wordt ingeladen.
+	*/
 
 	
 	@Override
@@ -30,7 +34,6 @@ public class FragmentWelcome extends SherlockFragment{
 		Log.d("CHECK", "FragmentWelcome onCreateView()");
 		View rootView = inflater.inflate(R.layout.welcome_screen, null);		
 	    Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/delicious-roman-webfont.ttf");  
-	   
 		return rootView;
 	
 	}
