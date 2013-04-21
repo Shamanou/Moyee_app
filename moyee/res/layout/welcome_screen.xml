@@ -2,17 +2,29 @@
 
 			<!-- 
 			* @title Moyee Welkom Scherm
-			* @author Projectgroep 5
+			* @author Robbert van der Hulst
 			* @param S1063848
 			* @since 04-04-2013
 			* @version 1.0
 			*/
 			--> 
-			    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			
+			<!-- 
+			* Hier wordt het type lay-out vastgesteld, en de achtergrond kleur van de pagina.
+			*/
+			--> 
+			
+			   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			        android:layout_width="wrap_content"
 			        android:layout_height="match_parent"
 			        android:background="@color/dark_blue" >
 
+			<!-- 
+			* Hier wordt er een string toegevoegd aan de pagina. 
+			  Dit is de informatie tekst die over koffie gaat.
+			*/
+			--> 
+			
         <TextView
             android:id="@+id/editText1"
             android:layout_width="wrap_content"
@@ -27,6 +39,11 @@
 
             <requestFocus />
 
+            <!-- 
+			* Hier wordt er een plaatje toegevoegd aan de pagina.
+			*/
+			--> 
+			
             <ImageView
                 android:id="@+id/imageView1"
                 android:layout_width="wrap_content"
