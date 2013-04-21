@@ -106,7 +106,7 @@ public class MainActivity extends SherlockFragmentActivity {
 	}
 	
 	/**
-	* Er wordt een dialog boven de huidige weergave aangemaakt met de layout van de login.xml.
+	* Er wordt een dialog boven de huidige weergave aangemaakt met de layout van de login.xml. RvdH
 	*/
 	
 	public void showLogin () {
