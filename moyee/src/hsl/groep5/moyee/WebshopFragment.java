@@ -21,6 +21,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
 
+/**
+* @title Webshop Fragment Moyee Applicatie
+* @author Projectgroep 5
+* @param S1063848
+* @since 04-04-2013
+* @version 1.0
+*/
+
 public class WebshopFragment extends SupportMapFragment implements
 		HttpAPIResult {
 	public static final String ARG_SECTION_NUMBER = "section_number";

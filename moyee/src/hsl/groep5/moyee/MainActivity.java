@@ -31,7 +31,6 @@ import com.actionbarsherlock.view.MenuItem;
 * @version 1.0
 */
 
-
 public class MainActivity extends SherlockFragmentActivity {
 	PagerAdapter mPagerAdapter;
 	ViewPager mViewPager;

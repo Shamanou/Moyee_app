@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+			<!-- 
+			* @title Strings
+			* @author Projectgroep 5
+			* @param S1063848
+			* @since 04-04-2013
+			* @version 1.0
+			*/
+			--> 
+			
+			<!-- Hier worden alle strings die gebruikt worden in de 
+			applicatie aangemaakt. RvdH--> 
+			
 <resources>
 
     <string name="app_name">Moyee Coffee</string>
     <string name="action_settings">Settings</string>
     <string name="welcome_message">Informatie</string>
-    <string name="welcome_option">Boodschap</string>
+    <string name="welcome_option">Informatie</string>
     <string name="welcome_option1">Koffiezoeker</string>
     <string name="welcome_option2">Koffie kopen</string>
     <string name="welcome_option3">Koffiescanner</string>

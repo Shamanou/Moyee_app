@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"	
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
@@ -11,6 +11,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
+    
+   			 <!-- 
+			* @title Activity Main Scherm
+			* @author Projectgroep 5
+			* @param S1063848
+			* @since 04-04-2013
+			* @version 1.0
+			*/
+			--> 
     
     <hsl.groep5.moyee.CustomViewPager
         android:id="@+id/pager"

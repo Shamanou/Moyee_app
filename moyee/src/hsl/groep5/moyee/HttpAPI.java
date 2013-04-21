@@ -12,6 +12,14 @@ import org.apache.http.util.EntityUtils;
 import android.os.AsyncTask;
 import android.util.Log;
 
+/**
+* @title HTTP Api Moyee Applicatie
+* @author Projectgroep 5
+* @param S1063848
+* @since 04-04-2013
+* @version 1.0
+*/
+
 public class HttpAPI extends AsyncTask<String, Integer, String> {
 	HttpAPIResult resultObject;
 	int id = 0;

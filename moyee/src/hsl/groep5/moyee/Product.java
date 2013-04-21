@@ -3,6 +3,14 @@ package hsl.groep5.moyee;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+* @title Product Moyee Applicatie
+* @author Projectgroep 5
+* @param S1063848
+* @since 04-04-2013
+* @version 1.0
+*/
+
 public class Product {
 	private int id = 0;
 	private String title = "";

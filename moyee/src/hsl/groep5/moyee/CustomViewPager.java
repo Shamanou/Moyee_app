@@ -1,5 +1,13 @@
 package hsl.groep5.moyee;
 
+/**
+* @title CustomViewPager Adapter Moyee Applicatie
+* @author Projectgroep 5
+* @param S1063848
+* @since 04-04-2013
+* @version 1.0
+*/
+
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;

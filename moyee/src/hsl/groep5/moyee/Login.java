@@ -13,6 +13,14 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+/**
+* @title Login Scherm Moyee Applicatie
+* @author Projectgroep 5
+* @param S1063848
+* @since 04-04-2013
+* @version 1.0
+*/
+
 public class Login {
 	
 	public class MainActivity extends Activity
