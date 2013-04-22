@@ -12,6 +12,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -55,12 +58,54 @@ public class WebshopFragment extends SupportMapFragment implements
 
 			@Override
 			public void onClick(View v) {
-				for(int i = 0; i < WebshopFragment.this.imageAdapter.products.size(); i++)
-				{
-					Product p = WebshopFragment.this.imageAdapter.products.get(i);
-					Log.d(p.getTitle()+ "  "+ p.getCount(), " test");
-				}
+				AlertDialog dialog = new AlertDialog.Builder(v.getContext()).create();
+			    dialog.setTitle("Confirmation");
+			    dialog.setMessage("Are you sure?");
+			    dialog.setCancelable(false);
+			    dialog.setButton(DialogInterface.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
+			        public void onClick(DialogInterface dialog, int buttonId) {
+			        	try {
+			        		JSONObject json = new JSONObject();
+							json.put("action", "order");
 
+							SharedPreferences settings = WebshopFragment.this.getActivity().getSharedPreferences("settings", 0);
+							String userName = settings.getString("name", "" );
+							String userMail = settings.getString("email", "" );
+							
+							JSONObject user = new JSONObject();
+							user.put("name", userName);
+							user.put("email", userMail);
+							
+							json.put("user", user);
+							
+							JSONArray order = new JSONArray();
+			        	
+				        	for(int i = 0; i < WebshopFragment.this.imageAdapter.products.size(); i++)
+							{
+								Product p = WebshopFragment.this.imageAdapter.products.get(i);
+								Log.d(p.getTitle()+ "  "+ p.getCount(), " test");
+								
+								if(p.getCount() > 0) {
+									JSONObject product = new JSONObject();
+									product.put("id", p.getId());
+									product.put("count", p.getCount());
+									
+									order.put(product);
+								}
+							}
+				        	
+				        	json.put("products", order);
+				        	Log.d("JSON", json.toString());
+			        	} catch (JSONException e) {
+							e.printStackTrace();
+						}
+			        }
+			    });
+			    dialog.setButton(DialogInterface.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
+			        public void onClick(DialogInterface dialog, int buttonId) {}
+			    });
+			    dialog.setIcon(android.R.drawable.ic_dialog_alert);
+			    dialog.show();
 			}
 
 		});

@@ -62,4 +62,8 @@ public class Product {
 		if(this.count > 0) 
 			this.count--;
 	}
+
+	public int getId() {
+		return this.id;
+	}
 }
