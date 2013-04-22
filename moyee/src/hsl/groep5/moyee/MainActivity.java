@@ -11,9 +11,7 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.view.WindowManager;
-import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -39,6 +37,7 @@ public class MainActivity extends SherlockFragmentActivity {
 	MapsFragment gmaps = new MapsFragment();
 	WebshopFragment webshop = new WebshopFragment();
 	FragmentWelcome fragmentWelcome = new FragmentWelcome();
+	CoffeeFragment coffeeFragment = new CoffeeFragment();
 	ActionBar actionbar;
 	ArrayList<Drawable> icons = new ArrayList<Drawable>();
 	
@@ -64,6 +63,7 @@ public class MainActivity extends SherlockFragmentActivity {
 		fragments.add(gmaps);
 		fragments.add(fragmentWelcome);
 		fragments.add(webshop);
+		fragments.add(coffeeFragment);
 		
 		mViewPager = (ViewPager)findViewById(R.id.pager);
 		mViewPager.setAdapter(mPagerAdapter); 

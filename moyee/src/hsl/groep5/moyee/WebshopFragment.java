@@ -142,7 +142,5 @@ public class WebshopFragment extends SupportMapFragment implements
 
 			e.printStackTrace();
 		}
-
 	}
-
 }

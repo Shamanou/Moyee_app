@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+			<!-- 
+			* @title Moyee Koffie Shop Scherm
+			* @author Shamanou van Leeuwen
+			* @param S143619
+			* @since 04-04-2013
+			* @version 1.0
+			*/
+			-->
+
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coffee_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="0.14"
+    android:background="#202543" >
+</ListView>
