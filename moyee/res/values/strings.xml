@@ -1,17 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-			<!-- 
-			* @title Strings
-			* @author Projectgroep 5
-			* @param S1063848
-			* @since 04-04-2013
-			* @version 1.0
-			*/
-			--> 
-			
-			<!-- Hier worden alle strings die gebruikt worden in de 
-			applicatie aangemaakt. RvdH--> 
-			
 <resources>
     <string name="app_name">Moyee Coffee</string>
     <string name="moyee_api_url">http://mike.k0k.nl/moyeeapi.php</string>
@@ -21,6 +8,7 @@
 	<string name="userdata">User Info</string>
 	
 	<!-- Login -->
+	<string name="user_dialog_title">User Info</string>
 	<string name="user_name">Name</string>
 	<string name="user_email">E-mailaddress</string>
 	<string name="user_button_save">Save</string>
@@ -38,8 +26,7 @@
 
     <!-- Home -->
 	<string name="tab_home">Information</string>
-	<string name="about"> 
-	    De internationale koffiemarkt zit tamelijk oneerlijk in elkaar. Van de prijs van een pak koffie blijft een fractie achter in een koffieproducerend land, het leeuwendeel komt terecht in het Westen. Het wrange is dat die producerende landen veelal afhankelijk zijn van ontwikkelingshulp, uit dat zelfde Westen.
+	<string name="about">De internationale koffiemarkt zit tamelijk oneerlijk in elkaar. Van de prijs van een pak koffie blijft een fractie achter in een koffieproducerend land, het leeuwendeel komt terecht in het Westen. Het wrange is dat die producerende landen veelal afhankelijk zijn van ontwikkelingshulp, uit dat zelfde Westen.
 	     
 Dit kan en moet anders vinden wij en daarom zijn wij Moyee Coffee begonnen. Koffie gemaakt volgens het door ons ontwikkelde FairChain-principe, met als streven meer opbrengst te creëren waar die thuis hoort. Goeie koffie: lekker, maar vooral met een grote sociale impact.
 
@@ -47,6 +34,4 @@ Onze koffiebonen groeien in het prachtige Beletta Forest in Kaffa, Ethiopië. De
 
 Koffiegoeroe Paul Verbunt draagt zorg voor een perfecte 
 slow roast en leidt momenteel onze lokale roastmaster op.</string>
-
-	
 </resources>

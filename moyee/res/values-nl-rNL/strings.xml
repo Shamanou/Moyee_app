@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-			<!-- 
-			* @title Strings
-			* @author Projectgroep 5
-			* @param S1063848
-			* @since 04-04-2013
-			* @version 1.0
-			*/
-			--> 
-			
-			<!-- Hier worden alle strings die gebruikt worden in de 
-			applicatie aangemaakt. RvdH--> 
-			
 <resources>
-
     <string name="app_name">Moyee Coffee</string>
-    <string name="action_settings">Settings</string>
-    <string name="welcome_message">Informatie</string>
-    <string name="welcome_option">Informatie</string>
-    <string name="welcome_option1">Koffiezoeker</string>
-    <string name="welcome_option2">Koffie kopen</string>
-    <string name="welcome_option3">Koffiescanner</string>
-	<string name="welcome_option2_button">Bestel koffie</string>
+    <string name="moyee_api_url">http://mike.k0k.nl/moyeeapi.php</string>
+    
+    <!-- Settings -->
+	<string name="translate">Taal</string>
+	<string name="userdata">Gebruikers Info</string>
+	
+	<!-- Login -->
+	<string name="user_dialog_title">Gebruikers Info</string>
+	<string name="user_name">Naam</string>
+	<string name="user_email">E-mailadres</string>
+	<string name="user_button_save">Opslaan</string>
+	<string name="user_button_skip">Overslaan</string>
+	
+	<!-- Maps -->
+	<string name="tab_maps">Moyee Zoeker</string>
+	
+	<!-- Shop -->
+	<string name="tab_shop">Mobiele Winkel</string>
+	<string name="tab_shop_button_order">Bestellen</string>
+	
+	<!-- Scanner -->
+    <string name="tab_scanner">QR Scanner</string>
+
+    <!-- Home -->
+	<string name="tab_home">Informatie</string>
+	<string name="about">De internationale koffiemarkt zit tamelijk oneerlijk in elkaar. Van de prijs van een pak koffie blijft een fractie achter in een koffieproducerend land, het leeuwendeel komt terecht in het Westen. Het wrange is dat die producerende landen veelal afhankelijk zijn van ontwikkelingshulp, uit dat zelfde Westen.
+	     
+Dit kan en moet anders vinden wij en daarom zijn wij Moyee Coffee begonnen. Koffie gemaakt volgens het door ons ontwikkelde FairChain-principe, met als streven meer opbrengst te creëren waar die thuis hoort. Goeie koffie: lekker, maar vooral met een grote sociale impact.
+
+Onze koffiebonen groeien in het prachtige Beletta Forest in Kaffa, Ethiopië. De bonen worden met liefde met de hand geplukt en dan snel naar de wasserij gebracht. Natuurlijk zijn dit alleen de meest superieure Arabica bonen, voor de kenners: Limu II bonen.
+
+Koffiegoeroe Paul Verbunt draagt zorg voor een perfecte 
+slow roast en leidt momenteel onze lokale roastmaster op.</string>
 </resources>
