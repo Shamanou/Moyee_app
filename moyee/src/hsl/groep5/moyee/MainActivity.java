@@ -1,9 +1,13 @@
 package hsl.groep5.moyee;
 
 import java.util.ArrayList;
+import java.util.Locale;
+
 import android.app.Dialog;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -44,6 +48,11 @@ public class MainActivity extends SherlockFragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		SharedPreferences settings = this.getSharedPreferences("settings", 0);
+		String loc = settings.getString("locale", "en");
+		this.setLocale(loc);
+		
 		Log.d("CHECK", "MainActivity onCreate()");
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -71,12 +80,6 @@ public class MainActivity extends SherlockFragmentActivity {
 		
 		actionbar = getSupportActionBar();
 		
-		/**
-		* @name = Variabele om de gegevens naam op te slaan
-		* @email = Variabele om gegevens emailadres op te slaan.
-		*/
-		
-		SharedPreferences settings = this.getSharedPreferences("settings", 0);
 		String name = settings.getString("name", "" );
 		String email = settings.getString("email", "" );
 		if(name.equals("") || email.equals("")) {
@@ -96,6 +99,7 @@ public class MainActivity extends SherlockFragmentActivity {
 	    // Handle item selection
 	    switch (item.getItemId()) {
 	        case R.id.translate:
+	        	this.showLanguage();
 	            return true;
 	        case R.id.userdata:
 	            this.showLogin();
@@ -166,5 +170,53 @@ public class MainActivity extends SherlockFragmentActivity {
     	*/
         
         dialog.show();
+	}
+	
+	public void showLanguage() {
+		final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.language);
+        dialog.setTitle(getResources().getString(R.string.translate));
+
+        OnClickListener clickListener = new OnClickListener() {
+        	@Override
+            public void onClick(View v) {
+        		SharedPreferences settings = getSharedPreferences("settings", 0);
+        		
+        		String loc = settings.getString("locale", "en");
+        		
+        		switch(v.getId()) {
+        			case R.id.lang_button_en:
+        				loc = "en";
+        				break;
+        			case R.id.lang_button_nl:
+        				loc = "nl";
+        				break;
+        		}
+        		
+	        	Editor edit = settings.edit();
+	        	edit.putString("locale", loc);
+	        	edit.commit();
+	        	
+	        	MainActivity.this.setLocale(loc);
+	        	
+	        	dialog.dismiss();
+            }
+        };
+        
+        Button btn = (Button) dialog.findViewById(R.id.lang_button_en);
+        btn.setOnClickListener(clickListener);
+        
+        btn = (Button) dialog.findViewById(R.id.lang_button_nl);
+        btn.setOnClickListener(clickListener);
+        
+        dialog.show();
+	}
+	
+	public void setLocale(String loc) {
+		Locale locale = new Locale(loc);
+		Locale.setDefault(locale);
+		Configuration config = new Configuration();
+		config.locale = locale;
+		getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
 	}
 }
