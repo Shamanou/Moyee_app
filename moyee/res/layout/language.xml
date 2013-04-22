@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/dark_blue"
+    android:orientation="vertical"
+    android:padding="40dp" >
+
+    <Button
+        android:id="@+id/lang_button_en"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lang_button_nl"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/moyee_button"
+        android:text="@string/lang_en" />
+
+    <Button
+        android:id="@+id/lang_button_nl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lang_button_en"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/moyee_button"
+        android:text="@string/lang_nl" />
+
+</RelativeLayout>
