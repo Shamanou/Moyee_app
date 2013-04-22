@@ -1,7 +1,6 @@
 package hsl.groep5.moyee;
 
 import java.util.ArrayList;
-
 import android.app.Dialog;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -16,12 +15,19 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+
+/**
+* @title Hoofdscherm Moyee Applicatie
+* @author Projectgroep 5
+* @param S1063848
+* @since 04-04-2013
+* @version 1.0
+*/
 
 public class MainActivity extends SherlockFragmentActivity {
 	PagerAdapter mPagerAdapter;
@@ -65,6 +71,11 @@ public class MainActivity extends SherlockFragmentActivity {
 		
 		actionbar = getSupportActionBar();
 		
+		/**
+		* @name = Variabele om de gegevens naam op te slaan
+		* @email = Variabele om gegevens emailadres op te slaan.
+		*/
+		
 		SharedPreferences settings = this.getSharedPreferences("settings", 0);
 		String name = settings.getString("name", "" );
 		String email = settings.getString("email", "" );
@@ -94,13 +105,20 @@ public class MainActivity extends SherlockFragmentActivity {
 	    }
 	}
 	
+	/**
+	* Er wordt een dialog boven de huidige weergave aangemaakt met de layout van de login.xml. RvdH
+	*/
+	
 	public void showLogin () {
-		//set up dialog
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.login);
         dialog.setTitle("Inloggen");
         dialog.setCancelable(false);
         
+        /**
+    	* De gegevens van de gebruiker worden opgeslagen in het bestandje settings. De gegevens worden opgeslagen in 
+    	* een string. RvdH
+    	*/
         
         SharedPreferences settings = getSharedPreferences("settings", 0);
 		String name = settings.getString("name", "" );
@@ -112,7 +130,10 @@ public class MainActivity extends SherlockFragmentActivity {
 		TextView txtEmail = (TextView) dialog.findViewById(R.id.email);
 		txtEmail.setText(email);
         
-        //set up button
+		 /**
+    	* Er wordt een knop aangemaakt waarmee de gebruiker zijn gegevens op kan slaan. RvdH
+    	*/
+		
         Button btnSave = (Button) dialog.findViewById(R.id.save);
         btnSave.setOnClickListener(new OnClickListener() {
         @Override
@@ -127,6 +148,10 @@ public class MainActivity extends SherlockFragmentActivity {
 	        	dialog.dismiss();
             }
         });
+        /**
+    	* Er wordt een knop aangemaakt waarmee de gebruiker het login scherm kan overslaan. RvdH
+    	*/
+		
         
         Button btnSkip = (Button) dialog.findViewById(R.id.skip);
         btnSkip.setOnClickListener(new OnClickListener() {
@@ -135,7 +160,11 @@ public class MainActivity extends SherlockFragmentActivity {
 	        	dialog.dismiss();
             }
         });
-        //now that the dialog is set up, it's time to show it    
+        
+        /**
+    	* Het dialoog wordt getoont. RvdH
+    	*/
+        
         dialog.show();
 	}
 }

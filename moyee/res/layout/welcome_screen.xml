@@ -1,24 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ScrollView1"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#202543" >
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent" >
+			<!-- 
+			* @title Moyee Welkom Scherm
+			* @author Robbert van der Hulst
+			* @param S1063848
+			* @since 04-04-2013
+			* @version 1.0
+			*/
+			--> 
+			
+			<!-- 
+			* Hier wordt het type lay-out vastgesteld, en de achtergrond kleur van de pagina.
+			*/
+			--> 
+			
+			   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:background="@color/dark_blue" >
 
+			<!-- 
+			* Hier wordt er een string toegevoegd aan de pagina. 
+			  Dit is de informatie tekst die over koffie gaat.
+			*/
+			--> 
+			
         <TextView
-            android:id="@+id/welcome_message"
+            android:id="@+id/editText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="74dp"
-            android:text="@string/welcome_message"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/green" />
-        
+            android:layout_alignParentRight="true"
+            android:inputType="textMultiLine"
+            android:text="@string/about"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" >
+             </TextView>
+
+            <requestFocus />
+
+            <!-- 
+			* Hier wordt er een plaatje toegevoegd aan de pagina.
+			*/
+			--> 
+			
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/editText1"
+                android:src="@drawable/koffie" />
+
     </RelativeLayout>
 
-</ScrollView>
+

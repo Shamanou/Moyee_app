@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+			<!-- 
+			* @title Moyee Koffie Shop Scherm
+			* @author Projectgroep 5
+			* @param S1063848
+			* @since 04-04-2013
+			* @version 1.0
+			*/
+			-->
+			
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -44,14 +54,17 @@
                 android:layout_weight="1"
                 android:text="-" />
 
-            <EditText
+            <TextView
                 android:id="@+id/textCount"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/green"
                 android:ems="10"
-                android:inputType="numberDecimal" />
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:textAlignment="center" />
 
             <Button
                 android:id="@+id/button_add"

@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+			<!-- 
+			* @title Moyee Maps Scherm
+			* @author Projectgroep 5
+			* @param S1063848
+			* @since 04-04-2013
+			* @version 1.0
+			*/
+			-->
+			
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/map"
     android:layout_width="match_parent"

@@ -26,6 +26,13 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+/**
+* @title Google Maps Fragment Moyee Applicatie
+* @author Projectgroep 5
+* @param S1063848
+* @since 04-04-2013
+* @version 1.0
+*/
 
 public class MapsFragment extends SherlockFragment implements HttpAPIResult,  LocationListener{
 	public static final String ARG_SECTION_NUMBER = "section_number";
@@ -57,7 +64,7 @@ public class MapsFragment extends SherlockFragment implements HttpAPIResult,  Lo
 		 }
 
 	
-		new HttpAPI(this).execute("http://mike.k0k.nl/moyeeapi.php?get=locations");
+		new HttpAPI(this).execute(getResources().getString(R.string.moyee_api_url) + "?get=locations");
 		 		
 		return rootView;
 	}

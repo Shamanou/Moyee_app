@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-	 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  
+	     <!-- 
+			* @title Moyee Login Scherm
+			* @author Robbert van der Hulst
+			* @param S1063848
+			* @since 04-04-2013
+			* @version 1.0
+			*/
+			-->
+			
+			<!-- De lay-out van het document wordt ingesteld
+			Achtergrondkleur van de pagina wordt meegegeven. RvdH -->
+			
+	      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	     android:id="@+id/RelativeLayout1"
 	     android:layout_width="fill_parent"
 	     android:layout_height="fill_parent"
 	     android:background="@color/dark_blue"
 	     android:orientation="vertical"
 	     android:padding="40dp" >
-	     
      <requestFocus />
      
+     
+			<!-- Er wordt een tekstveld aangemaakt met een id
+			Het tekstveld krijgt een grootte mee en een achtergrondkleur en
+			tekstkleur. Ook kan er een standaard tekst ingezet worden. RvdH -->
+			
      <EditText
          android:id="@+id/username"
          android:layout_width="wrap_content"
@@ -23,6 +40,10 @@
          android:singleLine="true"
          android:textColor="#000000" />
 
+     		<!-- Er wordt een tweede tekstveld aangemaakt met een id
+			Het tekstveld krijgt een grootte mee en een achtergrondkleur en
+			tekstkleur. Ook kan er een standaard tekst ingezet worden. RvdH -->
+			
     <EditText
         android:id="@+id/email"
         android:layout_width="wrap_content"
@@ -36,6 +57,10 @@
         android:inputType="textEmailAddress"
         android:textColor="#000000" />
 
+    		<!-- Er wordt een knop aangemaakt met een id
+			De knop krijgt een bepaalde grootte mee en een achtergrondkleur en
+			tekstkleur. Ook kan er een standaard tekst ingezet worden. RvdH -->
+			
     <Button
         android:id="@+id/save"
         android:layout_width="fill_parent"
@@ -48,7 +73,10 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/moyee_button"
         android:text="@string/save" />
-
+		
+		<!-- Er wordt een tweede knop aangemaakt met een id
+			De knop krijgt een bepaalde grootte mee en een achtergrondkleur en
+			tekstkleur. Ook kan er een standaard tekst ingezet worden. RvdH -->
     <Button
         android:id="@+id/skip"
         android:layout_width="fill_parent"

@@ -1050,16 +1050,16 @@ containing a value of this type.
         public static final int espresso=0x7f020071;
         public static final int fairchain_coffee=0x7f020072;
         public static final int ic_launcher=0x7f020073;
-        public static final int map=0x7f020074;
-        public static final int marker=0x7f020075;
-        public static final int moyee_button=0x7f020076;
-        public static final int settings=0x7f020077;
-        public static final int special=0x7f020078;
-        public static final int standaard=0x7f020079;
+        public static final int koffie=0x7f020074;
+        public static final int map=0x7f020075;
+        public static final int marker=0x7f020076;
+        public static final int moyee_button=0x7f020077;
+        public static final int settings=0x7f020078;
+        public static final int special=0x7f020079;
+        public static final int standaard=0x7f02007a;
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f040037;
-        public static final int ScrollView1=0x7f04004a;
         public static final int abs__action_bar=0x7f040026;
         public static final int abs__action_bar_container=0x7f040025;
         public static final int abs__action_bar_subtitle=0x7f040015;
@@ -1104,15 +1104,17 @@ containing a value of this type.
         public static final int button_sub=0x7f04003e;
         public static final int coffee_list=0x7f040041;
         public static final int disableHome=0x7f04000d;
+        public static final int editText1=0x7f04004b;
         public static final int edit_query=0x7f04002b;
         public static final int email=0x7f040043;
         public static final int homeAsUp=0x7f04000a;
         public static final int hybrid=0x7f040004;
         public static final int icon_image=0x7f04003c;
         public static final int icon_text=0x7f04003d;
+        public static final int imageView1=0x7f04004c;
         public static final int listMode=0x7f040006;
         public static final int map=0x7f040046;
-        public static final int menu=0x7f04004c;
+        public static final int menu=0x7f04004d;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
         public static final int pager=0x7f040038;
@@ -1127,15 +1129,15 @@ containing a value of this type.
         public static final int tabStrip=0x7f040039;
         public static final int terrain=0x7f040003;
         public static final int textCount=0x7f04003f;
-        public static final int translate=0x7f04004d;
+        public static final int translate=0x7f04004e;
         public static final int useLogo=0x7f040008;
-        public static final int userdata=0x7f04004e;
+        public static final int userdata=0x7f04004f;
         public static final int username=0x7f040042;
         public static final int webView=0x7f04003a;
-        public static final int welcome_message=0x7f04004b;
-        public static final int welcome_option2=0x7f040047;
-        public static final int welcome_option2_button=0x7f040049;
-        public static final int welcome_option2_items=0x7f040048;
+        public static final int welcome_option2=0x7f040048;
+        public static final int welcome_option2_button=0x7f04004a;
+        public static final int welcome_option2_items=0x7f040049;
+        public static final int welcome_option3=0x7f040047;
         public static final int wrap_content=0x7f040005;
     }
     public static final class integer {
@@ -1172,15 +1174,17 @@ containing a value of this type.
         public static final int koffieview=0x7f03001b;
         public static final int login=0x7f03001c;
         public static final int mapview=0x7f03001d;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001e;
-        public static final int sherlock_spinner_item=0x7f03001f;
-        public static final int shopview=0x7f030020;
-        public static final int welcome_screen=0x7f030021;
+        public static final int scannerview=0x7f03001e;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001f;
+        public static final int sherlock_spinner_item=0x7f030020;
+        public static final int shopview=0x7f030021;
+        public static final int welcome_screen=0x7f030022;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
     }
     public static final class string {
+        public static final int about=0x7f05002e;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abs__action_bar_home_description=0x7f050011;
@@ -1291,6 +1295,7 @@ containing a value of this type.
          */
         public static final int common_signin_button_text_long=0x7f05000d;
         public static final int email=0x7f050029;
+        public static final int moyee_api_url=0x7f05002f;
         public static final int save=0x7f05002a;
         public static final int skip=0x7f05002b;
         public static final int translate=0x7f05002c;

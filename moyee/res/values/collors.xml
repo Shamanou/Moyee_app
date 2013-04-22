@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+ 			 <!-- 
+			* @title Moyee Login Scherm
+			* @author Projectgroep 5
+			* @param S1063848
+			* @since 04-04-2013
+			* @version 1.0
+			*/
+			-->
+
+			<!-- Er worden 2 kleuren aangemaakt die door de hele 
+			applicatie te gebruiken zijn. RvdH -->
+
 <resources>
     <color name="green">#49B848</color>
     <color name="dark_blue">#202543</color>
