@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.res.Configuration;
@@ -49,6 +50,10 @@ public class MainActivity extends SherlockFragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+		SharedPreferences settings = this.getSharedPreferences("settings", 0);
+		String loc = settings.getString("locale", "en");
+		this.setLocale(loc);
+		
 		Log.d("CHECK", "MainActivity onCreate()");
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -75,12 +80,6 @@ public class MainActivity extends SherlockFragmentActivity {
 		
 		actionbar = getSupportActionBar();
 		
-		/**
-		* @name = Variabele om de gegevens naam op te slaan
-		* @email = Variabele om gegevens emailadres op te slaan.
-		*/
-		
-		SharedPreferences settings = this.getSharedPreferences("settings", 0);
 		String name = settings.getString("name", "" );
 		String email = settings.getString("email", "" );
 		if(name.equals("") || email.equals("")) {
@@ -198,12 +197,7 @@ public class MainActivity extends SherlockFragmentActivity {
 	        	edit.putString("locale", loc);
 	        	edit.commit();
 	        	
-	        	Locale locale = new Locale(loc);
-	    		Locale.setDefault(locale);
-	    		Configuration config = new Configuration();
-	    		config.locale = locale;
-	    		getBaseContext().getResources().updateConfiguration(config,
-	    		      getBaseContext().getResources().getDisplayMetrics());
+	        	MainActivity.this.setLocale(loc);
 	        	
 	        	dialog.dismiss();
             }
@@ -216,5 +210,13 @@ public class MainActivity extends SherlockFragmentActivity {
         btn.setOnClickListener(clickListener);
         
         dialog.show();
+	}
+	
+	public void setLocale(String loc) {
+		Locale locale = new Locale(loc);
+		Locale.setDefault(locale);
+		Configuration config = new Configuration();
+		config.locale = locale;
+		getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
 	}
 }
