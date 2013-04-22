@@ -15,6 +15,14 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+/**
+* @title infoAdapter
+* @author Shamanou van Leeuwen
+* @param S1043619
+* @since 04-04-2013
+* @version 1.0
+*/
+
 public class InfoAdapter extends BaseAdapter implements OnItemClickListener{
 	private final Context context;
 	private ArrayList<Product> products;

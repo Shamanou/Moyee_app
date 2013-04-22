@@ -6,23 +6,22 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.Dialog;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.Xml.Encoding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.OnClickListener;
-import android.webkit.WebView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
+
+/**
+* @title Informatie fragment Moyee applicatie
+* @author Shamanou van Leeuwen
+* @param S1043619
+* @since 04-04-2013
+* @version 1.0
+*/
 
 public class CoffeeFragment extends SherlockFragment implements HttpAPIResult {
 	private InfoAdapter listadapter;

@@ -30,6 +30,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 * @title Google Maps Fragment Moyee Applicatie
 * @author Projectgroep 5
 * @param S1063848
+* @param S1043619
 * @since 04-04-2013
 * @version 1.0
 */
