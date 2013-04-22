@@ -99,7 +99,7 @@ public class WebshopFragment extends SupportMapFragment implements
 				        	Log.d("JSON", json.toString());
 				        	
 				        	
-				        	new HttpAPI(WebshopFragment.this, 1).setParams(new BasicNameValuePair("order", json.toString())).execute(getResources().getString(R.string.moyee_api_url) + "?action=order");
+				        	new HttpAPI(WebshopFragment.this, 1).setParams(new BasicNameValuePair("order", json.toString())).execute(getResources().getString(R.string.moyee_api_url) + "?get=order");
 			        	} catch (JSONException e) {
 							e.printStackTrace();
 						}
