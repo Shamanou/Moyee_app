@@ -2,6 +2,7 @@ package hsl.groep5.moyee;
 
 import java.util.ArrayList;
 
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -51,7 +52,7 @@ public class WebshopFragment extends SupportMapFragment implements
 		grid_main.setAdapter(this.imageAdapter);
 		grid_main.setOnItemClickListener(this.imageAdapter);
 		new HttpAPI(this)
-				.execute("http://mike.k0k.nl/moyeeapi.php?get=products");
+				.execute(getResources().getString(R.string.moyee_api_url) + "?get=products");
 
 		button = (Button) rootView.findViewById(R.id.welcome_option2_button);
 		button.setOnClickListener(new OnClickListener() {
@@ -96,6 +97,9 @@ public class WebshopFragment extends SupportMapFragment implements
 				        	
 				        	json.put("products", order);
 				        	Log.d("JSON", json.toString());
+				        	
+				        	
+				        	new HttpAPI(WebshopFragment.this, 1).setParams(new BasicNameValuePair("order", json.toString())).execute(getResources().getString(R.string.moyee_api_url) + "?action=order");
 			        	} catch (JSONException e) {
 							e.printStackTrace();
 						}
@@ -116,21 +120,25 @@ public class WebshopFragment extends SupportMapFragment implements
 
 	@Override
 	public void onHttpResult(String result, int id) {
+		
 		JSONObject jsonObject = null;
 		try {
 			jsonObject = new JSONObject(result);
-
-			// haal de array 'data' uit het object
-			JSONArray data = jsonObject.getJSONArray("data");
-			ArrayList<Product> products = new ArrayList<Product>();
-			for (int i = 0; i < data.length(); i++) {
-				// pak een item uit de array
-				JSONObject item = data.getJSONObject(i);
-				Product p = new Product(item);
-				products.add(p);
+			if(id == 0) {
+				// haal de array 'data' uit het object
+				JSONArray data = jsonObject.getJSONArray("data");
+				ArrayList<Product> products = new ArrayList<Product>();
+				for (int i = 0; i < data.length(); i++) {
+					// pak een item uit de array
+					JSONObject item = data.getJSONObject(i);
+					Product p = new Product(item);
+					products.add(p);
+				}
+				this.imageAdapter.setProducts(products);
+				grid_main.invalidateViews();
+			} else if(id == 1) {
+				
 			}
-			this.imageAdapter.setProducts(products);
-			grid_main.invalidateViews();
 		} catch (JSONException e) {
 
 			e.printStackTrace();

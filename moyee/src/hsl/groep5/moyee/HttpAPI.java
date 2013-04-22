@@ -1,11 +1,17 @@
 package hsl.groep5.moyee;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
@@ -22,6 +28,7 @@ import android.util.Log;
 
 public class HttpAPI extends AsyncTask<String, Integer, String> {
 	HttpAPIResult resultObject;
+	List<NameValuePair> params = new ArrayList<NameValuePair>();
 	int id = 0;
 	
 	public HttpAPI (HttpAPIResult resultObject) {
@@ -33,6 +40,11 @@ public class HttpAPI extends AsyncTask<String, Integer, String> {
 		this.id = id;
 	}
 	
+	public HttpAPI setParams(NameValuePair param) {
+		params.add(param);
+		return this;
+	}
+	
 	@Override
 	protected String doInBackground(String... params) {
 		String url = params[0];
@@ -41,12 +53,17 @@ public class HttpAPI extends AsyncTask<String, Integer, String> {
 		HttpClient httpClient = new DefaultHttpClient();
 		 
 		// Creating HTTP Post
-		HttpGet httpGet = new HttpGet(url);
-		
+		HttpPost httpPost = new HttpPost(url);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(this.params));
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		String result = "";
 		// Making HTTP Request
 		try {
-		    HttpResponse response = httpClient.execute(httpGet);
+		    HttpResponse response = httpClient.execute(httpPost);
 		    result = EntityUtils.toString(response.getEntity());
 		} catch (ClientProtocolException e) {
 		    // writing exception to log

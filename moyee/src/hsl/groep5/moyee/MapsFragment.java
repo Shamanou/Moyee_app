@@ -64,7 +64,7 @@ public class MapsFragment extends SherlockFragment implements HttpAPIResult,  Lo
 		 }
 
 	
-		new HttpAPI(this).execute("http://mike.k0k.nl/moyeeapi.php?get=locations");
+		new HttpAPI(this).execute(getResources().getString(R.string.moyee_api_url) + "?get=locations");
 		 		
 		return rootView;
 	}
