@@ -26,8 +26,7 @@
 
     <!-- Home -->
 	<string name="tab_home">Information</string>
-	<string name="about">De internationale koffiemarkt zit tamelijk oneerlijk in elkaar. Van de prijs van een pak koffie blijft een fractie achter in een koffieproducerend land, het leeuwendeel komt terecht in het Westen. Het wrange is dat die producerende landen veelal afhankelijk zijn van ontwikkelingshulp, uit dat zelfde Westen.
-    <string name="action_settings">Settings</string>
+	<string name="action_settings">Settings</string>
     <string name="welcome_message">Informatie</string>
     <string name="welcome_option">Informatie</string>
     <string name="welcome_option1">Koffiezoeker</string>
@@ -38,8 +37,6 @@
 	<string name="email">E-mailadres</string>
 	<string name="save">Inloggen</string>
 	<string name="skip">Overslaan</string>
-	<string name="translate">Translate</string>
-	<string name="userdata">UserData</string>
 	<string name="about"> 
 	    De internationale koffiemarkt zit tamelijk oneerlijk in elkaar. Van de prijs van een pak koffie blijft een fractie achter in een koffieproducerend land, het leeuwendeel komt terecht in het Westen. Het wrange is dat die producerende landen veelal afhankelijk zijn van ontwikkelingshulp, uit dat zelfde Westen.
 	     
@@ -49,6 +46,4 @@ Onze koffiebonen groeien in het prachtige Beletta Forest in Kaffa, Ethiopië. De
 
 Koffiegoeroe Paul Verbunt draagt zorg voor een perfecte 
 slow roast en leidt momenteel onze lokale roastmaster op.</string>
-
-	<string name="moyee_api_url">http://mike.k0k.nl/moyeeapi.php</string>
 </resources>

@@ -1047,16 +1047,19 @@ containing a value of this type.
         public static final int abs__textfield_searchview_right_holo_dark=0x7f02006e;
         public static final int abs__textfield_searchview_right_holo_light=0x7f02006f;
         public static final int bonen=0x7f020070;
-        public static final int fairchain_coffee=0x7f020071;
-        public static final int ic_launcher=0x7f020072;
-        public static final int map=0x7f020073;
-        public static final int marker=0x7f020074;
-        public static final int moyee_button=0x7f020075;
-        public static final int settings=0x7f020076;
+        public static final int espresso=0x7f020071;
+        public static final int fairchain_coffee=0x7f020072;
+        public static final int ic_launcher=0x7f020073;
+        public static final int koffie=0x7f020074;
+        public static final int map=0x7f020075;
+        public static final int marker=0x7f020076;
+        public static final int moyee_button=0x7f020077;
+        public static final int settings=0x7f020078;
+        public static final int special=0x7f020079;
+        public static final int standaard=0x7f02007a;
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f040037;
-        public static final int ScrollView1=0x7f040048;
         public static final int abs__action_bar=0x7f040026;
         public static final int abs__action_bar_container=0x7f040025;
         public static final int abs__action_bar_subtitle=0x7f040015;
@@ -1097,21 +1100,27 @@ containing a value of this type.
         public static final int abs__title=0x7f04001f;
         public static final int abs__titleDivider=0x7f040020;
         public static final int abs__up=0x7f04000b;
-        public static final int button_add=0x7f04003e;
-        public static final int button_sub=0x7f04003c;
+        public static final int button_add=0x7f04004c;
+        public static final int button_sub=0x7f04004a;
+        public static final int coffee_list=0x7f04003c;
         public static final int disableHome=0x7f040009;
+        public static final int editText1=0x7f04004d;
         public static final int edit_query=0x7f04002b;
         public static final int email=0x7f040040;
         public static final int homeAsUp=0x7f040006;
         public static final int hybrid=0x7f040013;
-        public static final int icon_image=0x7f04003a;
-        public static final int icon_text=0x7f04003b;
+        public static final int icon_image=0x7f040048;
+        public static final int icon_text=0x7f040049;
+        public static final int imageView1=0x7f04004e;
+        public static final int lang_button_en=0x7f04003d;
+        public static final int lang_button_nl=0x7f04003e;
         public static final int listMode=0x7f040002;
         public static final int map=0x7f040043;
-        public static final int menu=0x7f04004a;
+        public static final int menu=0x7f04004f;
         public static final int none=0x7f040010;
         public static final int normal=0x7f040001;
         public static final int pager=0x7f040038;
+        public static final int row=0x7f04003b;
         public static final int satellite=0x7f040011;
         public static final int save=0x7f040041;
         public static final int showCustom=0x7f040008;
@@ -1121,12 +1130,12 @@ containing a value of this type.
         public static final int tabMode=0x7f040003;
         public static final int tabStrip=0x7f040039;
         public static final int terrain=0x7f040012;
-        public static final int textCount=0x7f04003d;
-        public static final int translate=0x7f04004b;
+        public static final int textCount=0x7f04004b;
+        public static final int translate=0x7f040050;
         public static final int useLogo=0x7f040004;
-        public static final int userdata=0x7f04004c;
+        public static final int userdata=0x7f040051;
         public static final int username=0x7f04003f;
-        public static final int welcome_message=0x7f040049;
+        public static final int webView=0x7f04003a;
         public static final int welcome_option2=0x7f040045;
         public static final int welcome_option2_button=0x7f040047;
         public static final int welcome_option2_items=0x7f040046;
@@ -1161,19 +1170,24 @@ containing a value of this type.
         public static final int abs__search_view=0x7f030015;
         public static final int abs__simple_dropdown_hint=0x7f030016;
         public static final int activity_main=0x7f030017;
-        public static final int koffieshopview=0x7f030018;
-        public static final int login=0x7f030019;
-        public static final int mapview=0x7f03001a;
-        public static final int scannerview=0x7f03001b;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001c;
-        public static final int sherlock_spinner_item=0x7f03001d;
-        public static final int shopview=0x7f03001e;
-        public static final int welcome_screen=0x7f03001f;
+        public static final int informationview=0x7f030018;
+        public static final int koffierow=0x7f030019;
+        public static final int koffieview=0x7f03001a;
+        public static final int language=0x7f03001b;
+        public static final int login=0x7f03001c;
+        public static final int mapview=0x7f03001d;
+        public static final int scannerview=0x7f03001e;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001f;
+        public static final int sherlock_spinner_item=0x7f030020;
+        public static final int shopview=0x7f030021;
+        public static final int shopview_item=0x7f030022;
+        public static final int welcome_screen=0x7f030023;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
     }
     public static final class string {
+        public static final int about=0x7f09003b;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abs__action_bar_home_description=0x7f090000;
@@ -1219,8 +1233,8 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090009;
-        public static final int action_settings=0x7f090021;
-        public static final int app_name=0x7f090020;
+        public static final int action_settings=0x7f090030;
+        public static final int app_name=0x7f090022;
         /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=70] 
          */
         public static final int auth_client_availability_notification_title=0x7f09001d;
@@ -1283,18 +1297,49 @@ containing a value of this type.
         find the service-side assets. [CHAR LIMIT=25] 
          */
         public static final int common_signin_button_text_long=0x7f09001c;
-        public static final int email=0x7f090029;
-        public static final int save=0x7f09002a;
-        public static final int skip=0x7f09002b;
-        public static final int translate=0x7f09002c;
-        public static final int userdata=0x7f09002d;
-        public static final int username=0x7f090028;
-        public static final int welcome_message=0x7f090022;
-        public static final int welcome_option=0x7f090023;
-        public static final int welcome_option1=0x7f090024;
-        public static final int welcome_option2=0x7f090025;
-        public static final int welcome_option2_button=0x7f090027;
-        public static final int welcome_option3=0x7f090026;
+        public static final int email=0x7f090038;
+        public static final int lang_en=0x7f090020;
+        public static final int lang_nl=0x7f090021;
+        public static final int moyee_api_url=0x7f090023;
+        public static final int save=0x7f090039;
+        public static final int skip=0x7f09003a;
+        /**  Home 
+ Home 
+         */
+        public static final int tab_home=0x7f09002f;
+        /**  Maps 
+ Maps 
+         */
+        public static final int tab_maps=0x7f09002b;
+        /**  Scanner 
+ Scanner 
+         */
+        public static final int tab_scanner=0x7f09002e;
+        /**  Shop 
+ Shop 
+         */
+        public static final int tab_shop=0x7f09002c;
+        public static final int tab_shop_button_order=0x7f09002d;
+        /**  Settings 
+ Settings 
+         */
+        public static final int translate=0x7f090024;
+        public static final int user_button_save=0x7f090029;
+        public static final int user_button_skip=0x7f09002a;
+        /**  Login 
+ Login 
+         */
+        public static final int user_dialog_title=0x7f090026;
+        public static final int user_email=0x7f090028;
+        public static final int user_name=0x7f090027;
+        public static final int userdata=0x7f090025;
+        public static final int username=0x7f090037;
+        public static final int welcome_message=0x7f090031;
+        public static final int welcome_option=0x7f090032;
+        public static final int welcome_option1=0x7f090033;
+        public static final int welcome_option2=0x7f090034;
+        public static final int welcome_option2_button=0x7f090036;
+        public static final int welcome_option3=0x7f090035;
     }
     public static final class style {
         /** 
