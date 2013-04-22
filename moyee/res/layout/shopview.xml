@@ -35,11 +35,11 @@
 
 	<Button
 	    android:id="@+id/welcome_option2_button"
-	    android:background="@drawable/moyee_button"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentBottom="true"
 	    android:layout_centerHorizontal="true"
-	    android:text="@string/welcome_option2_button" />
+	    android:background="@drawable/moyee_button"
+	    android:text="@string/tab_shop_button_order" />
 
 </RelativeLayout>

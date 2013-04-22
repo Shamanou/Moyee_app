@@ -52,10 +52,10 @@ public class MainActivity extends SherlockFragmentActivity {
 		
 		mPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments, titles);
 		
-		titles.add(getResources().getString(R.string.welcome_option1));
-		titles.add(getResources().getString(R.string.welcome_option));
-		titles.add(getResources().getString(R.string.welcome_option2));
-		titles.add(getResources().getString(R.string.welcome_option3));
+		titles.add(getResources().getString(R.string.tab_maps));
+		titles.add(getResources().getString(R.string.tab_home));
+		titles.add(getResources().getString(R.string.tab_shop));
+		titles.add(getResources().getString(R.string.tab_scanner));
 		
 		icons.add(getResources().getDrawable(R.drawable.map));
 		icons.add(getResources().getDrawable(R.drawable.about));

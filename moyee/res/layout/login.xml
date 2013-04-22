@@ -34,10 +34,10 @@
          android:layout_alignParentRight="true"
          android:layout_alignParentTop="true"
          android:background="#FFFFFF"
-         android:padding="5dp"
          android:ems="10"
-         android:hint="@string/username"
+         android:hint="@string/user_name"
          android:inputType="text"
+         android:padding="5dp"
          android:singleLine="true"
          android:textColor="#000000" />
 
@@ -49,15 +49,15 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-         android:padding="5dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/username"
-        android:background="#FFFFFF"
         android:layout_marginTop="5dp"
+        android:background="#FFFFFF"
         android:ems="10"
-        android:hint="@string/email"
+        android:hint="@string/user_email"
         android:inputType="textEmailAddress"
+        android:padding="5dp"
         android:textColor="#000000" />
 
     		<!-- Er wordt een knop aangemaakt met een id
@@ -68,19 +68,19 @@
         android:id="@+id/save"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/email"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/email"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/moyee_button"
-        android:text="@string/save" />
+        android:text="@string/user_button_save" />
 		
 		<!-- Er wordt een tweede knop aangemaakt met een id
 			De knop krijgt een bepaalde grootte mee en een achtergrondkleur en
 			tekstkleur. Ook kan er een standaard tekst ingezet worden. RvdH -->
-    <Button
+    <Button
         android:id="@+id/skip"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -88,6 +88,6 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/save"
         android:background="@drawable/moyee_button"
-        android:text="@string/skip" />
+        android:text="@string/user_button_skip" />
 
 </RelativeLayout>

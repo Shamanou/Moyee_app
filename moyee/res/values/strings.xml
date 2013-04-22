@@ -14,19 +14,30 @@
 			
 <resources>
     <string name="app_name">Moyee Coffee</string>
-    <string name="action_settings">Settings</string>
-    <string name="welcome_message">Information</string>
-    <string name="welcome_option">Information</string>
-    <string name="welcome_option1">Moyee Locator</string>
-    <string name="welcome_option2">Mobile Shop</string>
-    <string name="welcome_option3">Koffiescanner</string>
-	<string name="welcome_option2_button">Order</string>
-	<string name="username">Name</string>
-	<string name="email">E-mailaddress</string>
-	<string name="save">Save</string>
-	<string name="skip">Skip</string>
-	<string name="translate">Translate</string>
-	<string name="userdata">UserData</string>
+    <string name="moyee_api_url">http://mike.k0k.nl/moyeeapi.php</string>
+    
+    <!-- Settings -->
+	<string name="translate">Language</string>
+	<string name="userdata">User Info</string>
+	
+	<!-- Login -->
+	<string name="user_name">Name</string>
+	<string name="user_email">E-mailaddress</string>
+	<string name="user_button_save">Save</string>
+	<string name="user_button_skip">Skip</string>
+	
+	<!-- Maps -->
+	<string name="tab_maps">Moyee Locator</string>
+	
+	<!-- Shop -->
+	<string name="tab_shop">Mobile Shop</string>
+	<string name="tab_shop_button_order">Order</string>
+	
+	<!-- Scanner -->
+    <string name="tab_scanner">QR Scanner</string>
+
+    <!-- Home -->
+	<string name="tab_home">Information</string>
 	<string name="about"> 
 	    De internationale koffiemarkt zit tamelijk oneerlijk in elkaar. Van de prijs van een pak koffie blijft een fractie achter in een koffieproducerend land, het leeuwendeel komt terecht in het Westen. Het wrange is dat die producerende landen veelal afhankelijk zijn van ontwikkelingshulp, uit dat zelfde Westen.
 	     
@@ -37,5 +48,5 @@ Onze koffiebonen groeien in het prachtige Beletta Forest in Kaffa, Ethiopië. De
 Koffiegoeroe Paul Verbunt draagt zorg voor een perfecte 
 slow roast en leidt momenteel onze lokale roastmaster op.</string>
 
-	<string name="moyee_api_url">http://mike.k0k.nl/moyeeapi.php</string>
+	
 </resources>
