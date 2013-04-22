@@ -27,15 +27,12 @@ import android.widget.TextView;
 * @version 1.0
 */
 
-public class ImageAdapter extends BaseAdapter implements OnItemClickListener{
+public class ImageAdapter extends BaseAdapter {
     Context mContext;
     public ArrayList<Product> products;
     public static final int ACTIVITY_CREATE = 10;
     
-    public ImageAdapter(Context c){
-        mContext = c;
-    }
-
+    public ImageAdapter(Context c){ mContext = c; }
 
 	@Override
 	public int getCount() {
@@ -44,19 +41,12 @@ public class ImageAdapter extends BaseAdapter implements OnItemClickListener{
 		}
 		return 0;
 	}
-
 	
 	@Override
-	public Object getItem(int arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public Object getItem(int arg0) { return null; }
 
 	@Override
-	public long getItemId(int arg0) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	public long getItemId(int arg0) { return 0;	}
 	
 	public void setProducts(ArrayList<Product> products) {
 		this.products = products;
@@ -108,17 +98,4 @@ public class ImageAdapter extends BaseAdapter implements OnItemClickListener{
 
 		return v;
 	}
-
-
-	@Override
-	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-
-		
-	}
-
-
-
-
-	
-
 }

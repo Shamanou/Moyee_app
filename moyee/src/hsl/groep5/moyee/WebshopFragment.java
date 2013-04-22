@@ -50,7 +50,6 @@ public class WebshopFragment extends SupportMapFragment implements
 				.findViewById(R.id.welcome_option2_items);
 		this.imageAdapter = new ImageAdapter(this.getActivity());
 		grid_main.setAdapter(this.imageAdapter);
-		grid_main.setOnItemClickListener(this.imageAdapter);
 		new HttpAPI(this)
 				.execute(getResources().getString(R.string.moyee_api_url) + "?get=products");
 
