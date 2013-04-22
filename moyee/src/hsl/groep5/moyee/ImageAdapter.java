@@ -69,7 +69,7 @@ public class ImageAdapter extends BaseAdapter implements OnItemClickListener{
 			final Product p = this.products.get(position);
 			LayoutInflater li = (LayoutInflater) mContext
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			v = li.inflate(R.layout.koffieshopview, null);
+			v = li.inflate(R.layout.shopview_item, null);
 			TextView tv = (TextView) v.findViewById(R.id.icon_text);
 
 			tv.setText(p.getTitle());
