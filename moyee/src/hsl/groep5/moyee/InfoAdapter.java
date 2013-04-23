@@ -81,7 +81,8 @@ public class InfoAdapter extends BaseAdapter implements OnItemClickListener{
         dialog.setContentView(R.layout.informationview);
         dialog.setTitle(product.getTitle());
         dialog.setCancelable(true);
-
+        dialog.setCanceledOnTouchOutside(true);
+        
 		WebView code = (WebView) dialog.findViewById(R.id.webView);
 		code.loadData(product.getDescription(), "text/html", Encoding.UTF_8.toString());
 		
