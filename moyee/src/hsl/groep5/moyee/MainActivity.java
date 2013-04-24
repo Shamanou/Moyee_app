@@ -11,6 +11,7 @@ import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
@@ -28,7 +29,6 @@ import com.actionbarsherlock.view.MenuItem;
 /**
 * @title Hoofdscherm Moyee Applicatie
 * @author Projectgroep 5
-* @param S1063848
 * @since 04-04-2013
 * @version 1.0
 */
@@ -36,7 +36,9 @@ import com.actionbarsherlock.view.MenuItem;
 public class MainActivity extends SherlockFragmentActivity {
 	PagerAdapter mPagerAdapter;
 	ViewPager mViewPager;
+	PagerTabStrip mTabStrip;
 	ActionBar actionbar;
+	ArrayList<String> titles = new ArrayList<String>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +49,7 @@ public class MainActivity extends SherlockFragmentActivity {
 		this.setLocale(loc);
 		
 		setContentView(R.layout.activity_main);
-		
-		ArrayList<String> titles = new ArrayList<String>();
-		titles.add(getResources().getString(R.string.tab_maps));
-		titles.add(getResources().getString(R.string.tab_home));
-		titles.add(getResources().getString(R.string.tab_shop));
-		titles.add(getResources().getString(R.string.tab_scanner));
-		
+
 		ArrayList<Fragment> fragments = new ArrayList<Fragment>();
 		fragments.add(new MapsFragment());
 		fragments.add(new FragmentWelcome());
@@ -61,6 +57,8 @@ public class MainActivity extends SherlockFragmentActivity {
 		fragments.add(new CoffeeFragment());
 		
 		mPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments, titles);
+		
+		mTabStrip = (PagerTabStrip) findViewById(R.id.tabStrip);
 		
 		mViewPager = (ViewPager)findViewById(R.id.pager);
 		mViewPager.setAdapter(mPagerAdapter); 
@@ -205,5 +203,11 @@ public class MainActivity extends SherlockFragmentActivity {
 		Configuration config = new Configuration();
 		config.locale = locale;
 		getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+		
+		titles.clear();
+		titles.add(getResources().getString(R.string.tab_maps));
+		titles.add(getResources().getString(R.string.tab_home));
+		titles.add(getResources().getString(R.string.tab_shop));
+		titles.add(getResources().getString(R.string.tab_scanner));
 	}
 }
