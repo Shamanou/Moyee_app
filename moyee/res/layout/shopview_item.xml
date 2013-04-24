@@ -15,7 +15,7 @@
     android:layout_x="201px"
     android:layout_y="165px"
     android:background="@color/green"
-    android:gravity="center_horizontal"
+    android:gravity="left"
     android:orientation="horizontal" >
 
     <ImageView
