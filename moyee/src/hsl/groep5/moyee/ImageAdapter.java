@@ -60,10 +60,17 @@ public class ImageAdapter extends BaseAdapter {
 			LayoutInflater li = (LayoutInflater) mContext
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			v = li.inflate(R.layout.shopview_item, null);
+			
 			TextView tv = (TextView) v.findViewById(R.id.icon_text);
-
 			tv.setText(p.getTitle());
-			Log.d(p.getImageUrl(), " test");
+			
+			TextView txtPrice = (TextView) v.findViewById(R.id.price);
+			txtPrice.setText("€ " + p.getPrice());
+			
+			TextView txtSize = (TextView) v.findViewById(R.id.size);
+			txtSize.setText((int)p.getSize() + "gr");
+			
+
 			ImageView iv = (ImageView) v.findViewById(R.id.icon_image);
 			if (p.getImageUrl().equals("a")) {
 				iv.setImageResource(R.drawable.bonen);

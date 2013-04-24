@@ -2,21 +2,16 @@ package hsl.groep5.moyee;
 
 import java.util.ArrayList;
 import java.util.Locale;
-
 import android.app.Dialog;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.res.Configuration;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -99,6 +94,8 @@ public class MainActivity extends SherlockFragmentActivity {
 	* Er wordt een dialog boven de huidige weergave aangemaakt met de layout van de login.xml. RvdH
 	*/
 	
+
+
 	public void showLogin () {
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.login);
@@ -196,6 +193,7 @@ public class MainActivity extends SherlockFragmentActivity {
         
         dialog.show();
 	}
+	
 	
 	public void setLocale(String loc) {
 		Locale locale = new Locale(loc);
