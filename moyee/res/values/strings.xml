@@ -19,10 +19,10 @@
 	<string name="tab_shop_button_order">Order</string>
 	
 	<!-- Scanner -->
-    <string name="tab_scanner">QR Scanner</string>
+    <string name="tab_scanner">Coffee Information</string>
 
     <!-- Home -->
-	<string name="tab_home">Information</string>
+	<string name="tab_home">Moyee</string>
 	<string name="about"> 
 	    De internationale koffiemarkt zit tamelijk oneerlijk in elkaar. Van de prijs van een pak koffie blijft een fractie achter in een koffieproducerend land, het leeuwendeel komt terecht in het Westen. Het wrange is dat die producerende landen veelal afhankelijk zijn van ontwikkelingshulp, uit dat zelfde Westen.
 	     
