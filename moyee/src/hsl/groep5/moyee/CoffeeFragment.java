@@ -37,7 +37,7 @@ public class CoffeeFragment extends SherlockFragment implements HttpAPIResult {
 		this.listadapter = new InfoAdapter(this.getActivity());
 		listview.setAdapter(listadapter);
 		listview.setOnItemClickListener(listadapter);
-		new HttpAPI(this).execute("http://mike.k0k.nl/moyeeapi.php?get=products");
+		new HttpAPI(this).execute(getResources().getString(R.string.moyee_api_url) + "?get=products");
 		return rootView;
 	}
 	
