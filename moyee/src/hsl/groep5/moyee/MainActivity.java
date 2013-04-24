@@ -159,6 +159,8 @@ public class MainActivity extends SherlockFragmentActivity {
 		final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.language);
         dialog.setTitle(getResources().getString(R.string.translate));
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
 
         OnClickListener clickListener = new OnClickListener() {
         	@Override
