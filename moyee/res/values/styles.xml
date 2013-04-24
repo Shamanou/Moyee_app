@@ -16,15 +16,14 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    
-    <style name="mapViewStyle" parent="@android:style/Theme.Black">
-    </style>
-    
-    <style name="Theme.Styled" parent="Theme.Sherlock.Light.DarkActionBar">
-    <item name="actionBarStyle">@style/Widget.Styled.ActionBar</item>
-</style>
 
-<style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid.Inverse">
-</style>
+    <style name="mapViewStyle" parent="@android:style/Theme.Black"></style>
+
+    <style name="Theme.Styled" parent="Theme.Sherlock.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/Widget.Styled.ActionBar</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid.Inverse"></style>
 
 </resources>

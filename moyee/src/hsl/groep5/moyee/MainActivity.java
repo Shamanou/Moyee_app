@@ -36,43 +36,31 @@ import com.actionbarsherlock.view.MenuItem;
 public class MainActivity extends SherlockFragmentActivity {
 	PagerAdapter mPagerAdapter;
 	ViewPager mViewPager;
-	ArrayList<Fragment> fragments = new ArrayList<Fragment>();
-	ArrayList<String> titles = new ArrayList<String>();
-	MapsFragment gmaps = new MapsFragment();
-	WebshopFragment webshop = new WebshopFragment();
-	FragmentWelcome fragmentWelcome = new FragmentWelcome();
-	CoffeeFragment coffeeFragment = new CoffeeFragment();
 	ActionBar actionbar;
-	ArrayList<Drawable> icons = new ArrayList<Drawable>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		SharedPreferences settings = this.getSharedPreferences("settings", 0);
-		String loc = settings.getString("locale", "en");
+		String loc = settings.getString("locale", "test");
 		this.setLocale(loc);
 		
-		Log.d("CHECK", "MainActivity onCreate()");
-		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
 		setContentView(R.layout.activity_main);
 		
-		mPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments, titles);
-		
+		ArrayList<String> titles = new ArrayList<String>();
 		titles.add(getResources().getString(R.string.tab_maps));
 		titles.add(getResources().getString(R.string.tab_home));
 		titles.add(getResources().getString(R.string.tab_shop));
 		titles.add(getResources().getString(R.string.tab_scanner));
 		
-		icons.add(getResources().getDrawable(R.drawable.map));
-		icons.add(getResources().getDrawable(R.drawable.about));
-		icons.add(getResources().getDrawable(R.drawable.marker));
+		ArrayList<Fragment> fragments = new ArrayList<Fragment>();
+		fragments.add(new MapsFragment());
+		fragments.add(new FragmentWelcome());
+		fragments.add(new WebshopFragment());
+		fragments.add(new CoffeeFragment());
 		
-		fragments.add(gmaps);
-		fragments.add(fragmentWelcome);
-		fragments.add(webshop);
-		fragments.add(coffeeFragment);
+		mPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments, titles);
 		
 		mViewPager = (ViewPager)findViewById(R.id.pager);
 		mViewPager.setAdapter(mPagerAdapter); 
@@ -183,7 +171,6 @@ public class MainActivity extends SherlockFragmentActivity {
         		SharedPreferences settings = getSharedPreferences("settings", 0);
         		
         		String loc = settings.getString("locale", "en");
-        		
         		switch(v.getId()) {
         			case R.id.lang_button_en:
         				loc = "en";
